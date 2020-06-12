@@ -1,8 +1,8 @@
 {
-  "name": "{{projectName}}",
+  "name": "catenergy-19",
   "version": "17.0.0",
   "private": true,
-  "description": "Личный проект «{{projectTitle}}» от HTML Academy",
+  "description": "Личный проект «Cat Energy» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "stylelint": "10.1.x",
