@@ -1,14 +1,13 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  outline: 2px solid red;
+  outline: 2px solid saddlebrown;
 
   @include tablet {
-    background: green;
+    background: forestgreen;
   }
 }
 
 .page-header__wrapper {
   @include wrapper;
-  outline: 2px solid blue;
 }
