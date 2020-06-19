@@ -1,10 +1,44 @@
-@mixin list-reset {
+@mixin mobile() {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (min-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin wrapper() {
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include tablet {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include desktop {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@mixin list-reset() {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-@mixin h2-model {
+@mixin h2-model() {
   margin: 0;
   font-size: 36px;
   line-height: 60px;
@@ -13,7 +47,7 @@
   color: $title-color;
 }
 
-@mixin h3-model {
+@mixin h3-model() {
   margin: 0;
   font-size: 24px;
   line-height: 37px;
@@ -22,14 +56,13 @@
   color: $title-color;
 }
 
-@mixin p-model {
+@mixin p-model() {
   margin: 0;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   color: $text-color;
 }
-
 
 @mixin text-options($size, $height, $weight, $color) {
   font-size: $size;
@@ -38,26 +71,8 @@
   color: $color;
 }
 
-/* .wrapper() {
-  min-width: 320px;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin: 0 auto;
 
-  @media @tablet {
-    max-width: 768px;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  @media @desktop {
-    max-width: 1150px;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-
-.container() {
+/* .container() {
   width: 320px;
   margin: 0 auto;
 

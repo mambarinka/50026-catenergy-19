@@ -8,24 +8,6 @@ $title-color: #111111;
 $subtitle-color: #222222;
 $main-green-color: #68b738;
 $border-table-color: #cdcdcd;
-
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
-@mixin mobile() {
-  @media (max-width: 767px) {
-    @content;
-  }
-}
-
-@mixin tablet() {
-  @media (min-width: 768px) {
-    @content;
-  }
-}
-
-@mixin desktop() {
-  @media (min-width: 1300px) {
-    @content;
-  }
-}
