@@ -18,9 +18,8 @@
 
 @mixin wrapper() {
   width: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 6.25%;
+  padding-left: 6.25%;
+  padding-right: 6.25%;
 
   @include tablet {
     padding-left: 30px;
@@ -65,11 +64,12 @@
   color: $text-color;
 }
 
-@mixin text-options($size, $height, $weight, $color) {
+@mixin text-options($size, $height, $weight, $color, $font-family) {
   font-size: $size;
   line-height: $height;
   font-weight: $weight;
   color: $color;
+  font-family: $font-family;
 }
 
 

@@ -1,0 +1,53 @@
+.main-nav__wrapper {
+  @include wrapper;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid $border-table-color;
+}
+
+.main-nav__logo {
+  width: 67.69%;
+  min-height: 65px;
+  padding-top: 11px;
+
+  text-align: center;
+  cursor: pointer;
+  outline: 2px solid blue;
+}
+
+.main-nav__toggle {
+  width: 25px;
+  height: 19px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: 2px solid black;
+}
+
+.main-nav__list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 66px;
+
+  border-bottom: 1px solid $border-table-color;
+}
+
+.main-nav__link {
+  font: inherit;
+
+  @include text-options (20px, 20px, 500, $title-color, $font-title);
+  text-transform: uppercase;
+}

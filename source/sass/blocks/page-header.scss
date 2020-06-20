@@ -1,13 +1,4 @@
 .page-header {
-  display: flex;
-  flex-direction: column;
   outline: 2px solid saddlebrown;
-
-  @include tablet {
-    background: forestgreen;
-  }
-}
-
-.page-header__wrapper {
-  @include wrapper;
+  min-height: 65px;
 }

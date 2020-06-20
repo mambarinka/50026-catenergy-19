@@ -16,33 +16,32 @@
     <include src="build/img/sprite.svg"></include>
   </div>
   <header class="page-header">
-    <div class="page-header__wrapper">
-      <a class="logo">
-        <picture>
-          <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="logo__image" src="img/logo-mobile.svg" width="191" height="39" alt="Логотип магазина Cat Energy">
-        </picture>
-      </a>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <div class="main-nav__wrapper">
+        <a class="main-nav__logo">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="logo__image" src="img/logo-mobile.svg" width="191" height="39"
+              alt="Логотип магазина Cat Energy">
+          </picture>
+        </a>
+        <button class="main-nav__toggle" type="button">Открыть
+          меню</button>
+      </div>
 
-      <nav class="main-nav main-nav--closed main-nav--nojs">
-        <div class="main-nav__wrapper-button">
-          <button class="main-nav__toggle" type="button">Открыть
-            меню</button>
-        </div>
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--catalog">
-            <a class="main-nav__link">Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <main class="page-main">
