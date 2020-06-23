@@ -1,51 +1,74 @@
 .main-nav {
+  padding-top: 3.2%;
+
   @include tablet {
     @include wrapper;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 2.73%;
+    padding-top: 2.9%;
+  }
+
+  @include desktop {
+    padding-top: 3.62%;
   }
 }
 
 .main-nav__wrapper {
-  @include wrapper;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 6.25%;
+  padding-right: 6.25%;
+  padding-bottom: 4.1%;
 
   border-bottom: 1px solid $border-table-color;
 
   @include tablet {
     padding: 0;
+    width: 24.4%;
+
+    border: none;
+  }
+
+  @include desktop {
+    width: 16.2%;
   }
 }
 
-.main-nav__logo {
-  width: 67.69%;
-  min-height: 65px;
-  padding-top: 11px;
-
-  text-align: center;
+.main-nav__logo-image {
+  width: 74.69%;
   cursor: pointer;
-  outline: 2px solid blue;
+
+  &:hover [href],
+  &:focus [href] {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @include tablet {
-    flex-grow: 1;
-    padding-top: 0;
+    width: 100%;
+    min-height: 59px;
   }
 }
 
 .main-nav__toggle {
   position: relative;
-  width: 25px;
-  height: 19px;
+  width: 27px;
+  height: 23px;
 
   font-size: 0;
 
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  &:focus {
+    outline: 1px solid $main-green-color;
+  }
 
   @include tablet {
     display: none;
@@ -56,10 +79,10 @@
   content: "";
 
   position: absolute;
-  top: -1px;
+  top: 2px;
   right: 0;
 
-  width: 25px;
+  width: 24px;
   height: 2px;
 
   background-color: $subtitle-color;
@@ -67,14 +90,13 @@
 }
 
 .main-nav--opened .main-nav__toggle {
-
   &::before,
   &::after {
     content: "";
 
     position: absolute;
-    top: 8px;
-    left: 0;
+    top: 11px;
+    left: 1px;
 
     width: 25px;
     height: 2px;
@@ -100,12 +122,17 @@
   @include list-reset;
 
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 
   @include tablet {
     flex-direction: row;
-    flex-grow: 1;
     justify-content: flex-end;
+    width: 71.4%;
+  }
+
+  @include desktop {
+    width: 39.4%;
   }
 }
 
@@ -118,10 +145,10 @@
   border-bottom: 1px solid $border-table-color;
 
   @include tablet {
+    border: none;
+
     &:not(:first-child) {
       margin-left: 7%;
-
-      outline: 2px solid black;
     }
   }
 }
@@ -146,5 +173,9 @@
 
   @include tablet {
     @include text-options (18px, 25px, 400, $title-color, $font-title);
+  }
+
+  @include desktop {
+    @include text-options (20px, 25px, 400, $title-color, $font-title);
   }
 }
