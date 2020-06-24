@@ -40,6 +40,21 @@
   margin: 0;
 }
 
+@mixin h1-model() {
+  margin: 0;
+  font-size: 36px;
+  line-height: 36px;
+  font-family: $font-title;
+  font-weight: 400;
+  color: $bg-white-color;
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+    color: $title-color;
+  }
+}
+
 @mixin h2-model() {
   margin: 0;
   font-size: 36px;
