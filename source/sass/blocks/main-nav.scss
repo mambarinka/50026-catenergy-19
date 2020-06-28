@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 2.9%;
+    padding-top: 22px;
   }
 
   @include desktop {
@@ -199,7 +199,7 @@
   }
 
   @include desktop {
-    @include text-options (20px, 25px, 400, $title-color, $font-title);
+    @include text-options (20px, 25px, 400, $bg-white-color, $font-title);
 
     &--current::after {
       bottom: -11px;
