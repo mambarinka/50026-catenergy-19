@@ -10,7 +10,7 @@
   }
 
   @include desktop {
-    padding-top: 3.62%;
+    padding-top: 52px;
   }
 }
 
@@ -133,7 +133,7 @@
   }
 
   @include desktop {
-    width: 39.4%;
+    width: 50%;
   }
 }
 
@@ -150,6 +150,12 @@
 
     &:not(:first-child) {
       margin-left: 7%;
+    }
+  }
+
+  @include desktop {
+    &:not(:first-child) {
+      margin-left: 5.5%;
     }
   }
 }
