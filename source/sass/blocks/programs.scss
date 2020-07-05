@@ -1,0 +1,98 @@
+.programs {
+  @include wrapper;
+  margin-bottom: 33px;
+}
+
+.programs__list {
+  @include list-reset;
+}
+
+.programs__item {
+  margin-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 18px;
+  padding-left: 7.1%;
+  padding-right: 7.1%;
+  background-color: $bg-grey-color;
+
+  &--slim .programs__item-title {
+    &::after {
+      background-image: url("../img/icon-cat-slim.svg");
+    }
+  }
+
+  &--pro .programs__item-title {
+    &::after {
+      top: -6px;
+      background-image: url("../img/icon-cat-pro.svg");
+    }
+  }
+
+  @include tablet {
+    padding-top: 77px;
+    padding-left: 7.4%;
+    padding-right: 7.4%;
+  }
+}
+
+.programs__item-title {
+  @include h3-model;
+  position: relative;
+  margin-bottom: 29px;
+  padding-left: 71px;
+
+  text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -6px;
+    left: 1px;
+    width: 50px;
+    height: 50px;
+    background-color: $main-green-color;
+    border-radius: 50%;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -9px;
+    left: -7px;
+    width: 67px;
+    height: 50px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include tablet {
+    padding-left: 0;
+  }
+}
+
+.programs__description {
+  padding-bottom: 21px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 20px;
+
+  @include tablet {
+    width: 70%;
+  }
+}
+
+.programs__link {
+  @include text-options(16px, 16px, 400, $title-color, $font-title);
+  position: relative;
+  text-transform: uppercase;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 25%;
+    right: -36px;
+    width: 24px;
+    height: 12px;
+    background: url("../img/icon-right-arrow-long.svg");
+  }
+}
