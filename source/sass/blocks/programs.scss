@@ -5,6 +5,12 @@
 
 .programs__list {
   @include list-reset;
+
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .programs__item {
@@ -50,6 +56,30 @@
         width: 268px;
         height: 246px;
       }
+    }
+  }
+
+  @include desktop {
+    width: 46.7%;
+    padding-left: 4.2%;
+    padding-right: 4.2%;
+
+    &--pro .programs__item-title {
+      &::after {
+        top: -27px;
+        right: auto;
+        left: -17px;
+        width: 133px;
+        height: 97px;
+      }
+    }
+
+    &--slim .programs__description {
+      width: auto;
+    }
+
+    &--pro .programs__description {
+      width: auto;
     }
   }
 }
@@ -105,6 +135,27 @@
       height: 194px;
     }
   }
+
+  @include desktop {
+    margin-bottom: 74px;
+    padding-left: 35%;
+
+    &::before {
+      top: -31px;
+      left: 0;
+      right: auto;
+      width: 100px;
+      height: 100px;
+    }
+
+    &::after {
+      top: -35px;
+      right: auto;
+      left: 9px;
+      width: 80px;
+      height: 97px;
+    }
+  }
 }
 
 .programs__description {
@@ -118,6 +169,11 @@
     margin-bottom: 34px;
 
     border: none;
+  }
+
+  @include desktop {
+    margin-bottom: 30px;
+    padding-bottom: 0;
   }
 }
 

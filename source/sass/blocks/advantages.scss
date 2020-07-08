@@ -1,0 +1,41 @@
+.advantages {
+  @include wrapper;
+}
+
+.advantages__title {
+  @include h2-model;
+}
+
+.advantages__list {
+  @include list-reset;
+}
+
+/* .advantages__item {
+
+} */
+
+.advantages__description {
+  @include p-model;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $main-green-color;
+  }
+
+  &::after {
+    position: absolute;
+    content: url("../../img/advantage-dining@1x.png");
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    outline: 2px solid black;
+  }
+}
