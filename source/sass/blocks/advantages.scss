@@ -1,41 +1,167 @@
 .advantages {
   @include wrapper;
+  margin-bottom: 45px;
+
+  @include tablet {
+    padding-bottom: 76px;
+    margin-bottom: 52px;
+
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  @include desktop {
+    margin-bottom: 134px;
+    padding-bottom: 0;
+
+    border: none;
+  }
 }
 
 .advantages__title {
   @include h2-model;
+
+  margin-bottom: 30px;
+
+  @include tablet {
+    margin-bottom: 74px;
+  }
 }
 
 .advantages__list {
   @include list-reset;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
-/* .advantages__item {
+.advantages__item {
+  &:not(:last-child) {
+    margin-bottom: 26px;
+  }
 
-} */
+  &--leaf .advantages__description {
+    &::after {
+      content: url("../../img/advantage-leaf@1x.png");
+    }
+  }
+
+  &--powder .advantages__description {
+    &::after {
+      content: url("../../img/advantage-powder@1x.png");
+    }
+  }
+
+  &--dining .advantages__description {
+    &::after {
+      content: url("../../img/advantage-dining@1x.png");
+    }
+  }
+
+  &--clock .advantages__description {
+    &::after {
+      content: url("../../img/advantage-clock@1x.png");
+    }
+  }
+
+  @include tablet {
+    position: relative;
+    width: 40.7%;
+    margin-right: 5%;
+
+    &:nth-child(2n) {
+      margin-bottom: 135px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      @include text-options(281px, 281px, 400, $bg-grey-color, $font-title);
+      position: absolute;
+      z-index: -1;
+      top: -43px;
+      left: 114px;
+    }
+
+    &:nth-child(1)::after {
+      content: "1";
+    }
+
+    &:nth-child(2)::after {
+      content: "2";
+    }
+
+    &:nth-child(3)::after {
+      content: "3";
+    }
+
+    &:nth-child(4)::after {
+      content: "4";
+    }
+  }
+
+  @include desktop {
+    width: 20.08%;
+    margin-right: auto;
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
 
 .advantages__description {
   @include p-model;
   position: relative;
+  padding-left: 80px;
 
   &::before {
     position: absolute;
     content: "";
-    top: 0;
+    top: -2px;
     left: 0;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+    width: 60px;
+    height: 60px;
     background-color: $main-green-color;
   }
 
   &::after {
     position: absolute;
-    content: url("../../img/advantage-dining@1x.png");
-    top: 0;
-    left: 0;
-    width: 30px;
-    height: 30px;
-    outline: 2px solid black;
+    top: 3px;
+    left: 5px;
+    width: 50px;
+    height: 50px;
+  }
+
+  @include tablet {
+    padding-left: 0;
+    padding-top: 110px;
+    width: 87.6%;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 12px;
+      left: 15px;
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  @include desktop {
+    width: 100%;
   }
 }

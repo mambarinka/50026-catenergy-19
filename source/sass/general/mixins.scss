@@ -62,6 +62,10 @@
   font-family: $font-title;
   font-weight: 400;
   color: $title-color;
+
+  @include tablet {
+    font-size: 60px;
+  }
 }
 
 @mixin h3-model() {
