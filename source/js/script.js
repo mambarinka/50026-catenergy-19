@@ -1,5 +1,10 @@
 var navMain = document.querySelector('.main-nav');
 var navToggle = document.querySelector('.main-nav__toggle');
+var buttonBefore = document.querySelector(".example__button--before");
+var buttonAfter = document.querySelector(".example__button--after");
+var slider = document.querySelector(".example__bar-toggle");
+var imageBefore = document.querySelector(".example__image--before");
+var imageAfter = document.querySelector(".example__image--after");
 /* var modal = document.querySelector(".modal");
 var buttonCart = document.querySelectorAll(".js-button-cart");
 var overlay = document.querySelector(".modal__overlay-js");
@@ -15,6 +20,18 @@ navToggle.addEventListener('click', function () {
     navMain.classList.add('main-nav--closed');
     navMain.classList.remove('main-nav--opened');
   }
+});
+
+buttonBefore.addEventListener("click", function () {
+  slider.classList.remove("example__bar-toggle--after");
+  imageAfter.classList.add("example__hidden");
+  imageBefore.classList.remove("example__hidden");
+});
+
+buttonAfter.addEventListener("click", function () {
+  slider.classList.add("example__bar-toggle--after");
+  imageBefore.classList.add("example__hidden");
+  imageAfter.classList.remove("example__hidden");
 });
 
 /* if (buttonCart) {
