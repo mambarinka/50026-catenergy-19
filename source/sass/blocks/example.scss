@@ -130,8 +130,11 @@
 }
 
 .example__cost-text {
-  display: block;
   margin-bottom: 8px;
+
+  @include tablet {
+    display: block;
+  }
 }
 
 .example__show {
@@ -149,6 +152,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-bottom: 14px;
   }
 }
 
@@ -164,6 +168,12 @@
   align-items: center;
   padding-left: 18%;
   padding-right: 16.3%;
+
+  @include tablet {
+    width: 100%;
+    padding-left: 12.8%;
+    padding-right: 12.8%;
+  }
 }
 
 .example__button {
@@ -171,6 +181,23 @@
 
   text-transform: uppercase;
   border: none;
+
+  @include tablet {
+    padding: 0;
+    padding-bottom: 5px;
+    font-size: 20px;
+    background-color: $bg-white-color;
+
+    border-bottom: 1px dotted #bebebe;
+
+    &--before {
+      margin-right: 24px;
+    }
+
+    &--after {
+      margin-left: 21px;
+    }
+  }
 }
 
 .example__bar {
@@ -181,6 +208,14 @@
   border: 1px solid $border-table-color;
   border-radius: 6px;
   cursor: pointer;
+
+  @include tablet {
+    width: 76%;
+    height: 6px;
+
+    background-color: #dcdcdc;
+    border-color: #dcdcdc;
+  }
 }
 
 .example__bar-toggle {
@@ -196,5 +231,27 @@
 
   &--after {
     left: 51%;
+  }
+
+  @include tablet {
+    top: -16px;
+    left: calc(50% - 17px);
+    width: 34px;
+    height: 34px;
+    background-color: $bg-white-color;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 5px);
+      left: calc(50% - 5px);
+      width: 10px;
+      height: 10px;
+      background-color: $main-green-color;
+      border-radius: 50%;
+    }
   }
 }
