@@ -24,12 +24,14 @@ navToggle.addEventListener('click', function () {
 
 buttonBefore.addEventListener("click", function () {
   slider.classList.remove("example__bar-toggle--after");
+  slider.classList.add("example__bar-toggle--before");
   imageAfter.classList.add("example__hidden");
   imageBefore.classList.remove("example__hidden");
 });
 
 buttonAfter.addEventListener("click", function () {
   slider.classList.add("example__bar-toggle--after");
+  slider.classList.remove("example__bar-toggle--before");
   imageBefore.classList.add("example__hidden");
   imageAfter.classList.remove("example__hidden");
 });

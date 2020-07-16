@@ -11,10 +11,35 @@
   @include desktop {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: flex-start;
+    padding: 0;
 
     background-color: $bg-grey-color;
   }
+}
+
+.example__title-wrapper {
+  margin-bottom: 23px;
+
+  @include tablet {
+    margin-bottom: 64px;
+  }
+
+  @include desktop {
+    width: 100%;
+    margin: 0;
+    padding-top: 18px;
+    padding-bottom: 74px;
+
+    background-color: $bg-white-color;
+  }
+}
+
+.example__title {
+  @include wrapper;
+  @include h2-model;
 }
 
 .example__text-wrapper {
@@ -28,29 +53,13 @@
   @include desktop {
     align-items: flex-start;
     max-width: 1300px;
-    width: 50%;
+    width: 42%;
     padding: 0;
+    padding-top: 70px;
     padding-left: 7.7%;
-    padding-right: 7.7%;
+    padding-right: 4%;
 
     background-color: $bg-grey-color;
-  }
-}
-
-.example__title {
-  @include h2-model;
-  @include wrapper;
-  margin-bottom: 23px;
-
-  @include tablet {
-    margin-bottom: 64px;
-  }
-
-  @include desktop {
-    margin: 0;
-    margin-bottom: 146px;
-    padding: 0;
-    background-color: $bg-white-color;
   }
 }
 
@@ -65,9 +74,9 @@
   }
 
   @include desktop {
-    width: 71%;
+    width: 100%;
     margin: 0;
-    margin-bottom: 19px;
+    margin-bottom: 68px;
     padding: 0;
   }
 }
@@ -87,7 +96,7 @@
   }
 
   @include desktop {
-    width: 73%;
+    width: 84%;
     margin: 0;
     margin-bottom: 58px;
     padding: 0;
@@ -142,6 +151,10 @@
 
     background-color: $bg-white-color;
   }
+
+  @include desktop {
+    background-color: $bg-grey-color;
+  }
 }
 
 .example__cost {
@@ -179,7 +192,7 @@
 
   @include desktop {
     display: inline-block;
-    margin-right: 12%;
+    margin-right: 13.5%;
   }
 }
 
@@ -199,7 +212,13 @@
   }
 
   @include desktop {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 58%;
+    padding-top: 70px;
+
+    background-image: linear-gradient(to right, $bg-grey-color 52.8%, #eaeaea 0%);
   }
 }
 
@@ -213,9 +232,9 @@
     margin-bottom: 14px;
   }
 
-  /*   @include desktop {
-    width: 50%;
-  } */
+  @include desktop {
+    margin-bottom: 33px;
+  }
 }
 
 .example__image {
@@ -225,6 +244,10 @@
 
   @include tablet {
     margin-top: -169px;
+  }
+
+  @include desktop {
+    margin-top: -261px;
   }
 }
 
@@ -240,6 +263,10 @@
     padding-left: 12.8%;
     padding-right: 12.8%;
   }
+
+  @include desktop {
+    width: 94.5%;
+  }
 }
 
 .example__button {
@@ -252,7 +279,6 @@
     padding: 0;
     padding-bottom: 5px;
     font-size: 20px;
-    background-color: $bg-white-color;
 
     border-bottom: 1px dotted #bebebe;
 
@@ -318,6 +344,14 @@
       height: 10px;
       background-color: $main-green-color;
       border-radius: 50%;
+    }
+
+    &--before {
+      left: 0;
+    }
+
+    &--after {
+      left: 100%;
     }
   }
 }
