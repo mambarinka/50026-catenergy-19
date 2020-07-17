@@ -21,6 +21,7 @@
     margin-bottom: 0;
 
     background-color: $bg-grey-color;
+    background-image: linear-gradient(to right, $bg-grey-color 50%, #eaeaea 0%);
   }
 }
 
@@ -244,7 +245,7 @@
   }
 
   @include desktop {
-    margin-bottom: 33px;
+    margin-bottom: 37px;
   }
 }
 
@@ -277,7 +278,9 @@
   }
 
   @include desktop {
-    width: 94.5%;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0;
   }
 }
 
@@ -319,6 +322,10 @@
 
     background-color: #dcdcdc;
     border-color: #dcdcdc;
+  }
+
+  @include desktop {
+    width: 61.5%;
   }
 }
 
