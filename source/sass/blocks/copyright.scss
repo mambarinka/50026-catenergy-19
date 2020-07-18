@@ -1,0 +1,22 @@
+.copyright {
+  padding-top: 18px;
+
+  @include tablet {
+    padding: 0;
+  }
+}
+
+.copyright__link {
+  @include text-options(16px, 16px, 400, $text-color, $font-main);
+  display: flex;
+
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.copyright__icon {
+  position: relative;
+  margin-left: auto;
+  right: -8px;
+  fill: #666666;
+}
