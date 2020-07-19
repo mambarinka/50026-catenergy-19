@@ -2,7 +2,12 @@
   padding-top: 18px;
 
   @include tablet {
+    width: 23.2%;
     padding: 0;
+  }
+
+  @include desktop {
+    width: 13.2%;
   }
 }
 
@@ -12,6 +17,10 @@
 
   justify-content: flex-end;
   align-items: center;
+
+  @include tablet {
+    justify-content: space-between;
+  }
 }
 
 .copyright__icon {

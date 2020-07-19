@@ -10,14 +10,23 @@
   border-bottom: 1px solid #d9d9d9;
 
   @include tablet {
+    justify-content: space-between;
     width: 20%;
 
     border-bottom: none;
+  }
+
+  @include desktop {
+    width: 12%;
   }
 }
 
 .social-list__item {
   width: 20%;
+
+  @include tablet {
+    width: 30%;
+  }
 }
 
 .social-list__link {
@@ -26,4 +35,21 @@
 
 .social-list__icon {
   fill: #676767;
+
+  @include tablet {
+    &--vk {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--insta {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
+  }
 }
