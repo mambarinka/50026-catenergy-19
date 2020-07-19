@@ -1,0 +1,117 @@
+@mixin mobile() {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media (min-width: 1300px) {
+    @content;
+  }
+}
+
+@mixin wrapper() {
+  width: auto;
+  padding-left: 6.25%;
+  padding-right: 6.25%;
+
+  @include tablet {
+    padding-left: 3.9%;
+    padding-right: 3.9%;
+  }
+
+  @include desktop {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-left: 2.85%;
+    padding-right: 2.85%;
+  }
+}
+
+@mixin list-reset() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin h1-model() {
+  margin: 0;
+  font-size: 36px;
+  line-height: 36px;
+  font-family: $font-title;
+  font-weight: 400;
+  color: $bg-white-color;
+
+  @include tablet {
+    font-size: 60px;
+    line-height: 60px;
+    color: $title-color;
+  }
+}
+
+@mixin h2-model() {
+  margin: 0;
+  font-size: 36px;
+  line-height: 60px;
+  font-family: $font-title;
+  font-weight: 400;
+  color: $title-color;
+
+  @include tablet {
+    font-size: 60px;
+  }
+}
+
+@mixin h3-model() {
+  margin: 0;
+  font-size: 24px;
+  line-height: 37px;
+  font-family: $font-title;
+  font-weight: 400;
+  color: $title-color;
+
+  @include tablet {
+    font-size: 36px;
+  }
+}
+
+@mixin p-model() {
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $text-color;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@mixin text-options($size, $height, $weight, $color, $font-family) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+  font-family: $font-family;
+}
+
+
+/* .container() {
+  width: 320px;
+  margin: 0 auto;
+
+  @media @tablet {
+    width: 768px;
+  }
+
+  @media @desktop {
+    width: 1150px;
+  }
+} */
