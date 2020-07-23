@@ -1,5 +1,11 @@
 .cooperation {
   position: relative;
+
+  &--gray {
+    padding-top: 28px;
+
+    background-color: $bg-grey-color;
+  }
 }
 
 .cooperation__text-wrapper {

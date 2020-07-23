@@ -38,7 +38,7 @@
   border-top: 1px solid #ededed;
 
   &:last-child {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
 
     border-bottom: 1px solid #ededed;
   }
@@ -85,6 +85,7 @@
 
 .main-goods__photo-link {
   width: 50%;
+  text-align: center;
 
   @include tablet {
     position: relative;

@@ -359,65 +359,77 @@
     </section>
 
     <section class="additional-goods">
-      <h2 class="additional-goods__title">Дополнительные товары</h2>
+      <div class="additional-goods__wrapper">
+        <h2 class="additional-goods__title">Дополнительные товары</h2>
 
-      <ul class="additional-goods__list">
-        <li class="additional-goods__item add-product">
-          <h3 class="add-product__title">Сахарозаменитель</h3>
-          <table class="extra-product__options">
-            <tr>
-              <td class="extra-product__options-amount">1 упаковка (100 г)</td>
-              <td class="extra-product__options-cost">200 Р.</td>
-            </tr>
-          </table>
-          <a class="extra-catalog__button button" href="#">Заказать</a>
-        </li>
+        <ul class="additional-goods__list">
+          <li class="additional-goods__item add-product">
+            <h3 class="add-product__title">Сахарозаменитель</h3>
+            <table class="add-product__options">
+              <tr>
+                <td class="add-product__options-amount">1 упаковка (100 г)</td>
+                <td class="add-product__options-cost">200 Р.</td>
+              </tr>
+            </table>
+            <a class="add-product__button button" href="#">Заказать</a>
+          </li>
 
-        <li class="additional-goods__item add-product">
-          <h3 class="add-product__title">Питьевая вода</h3>
-          <table class="extra-product__options">
-            <tr>
-              <td class="extra-product__options-amount">5 литров</td>
-              <td class="extra-product__options-cost">50 Р.</td>
-            </tr>
-          </table>
-          <a class="extra-catalog__button button" href="#">Заказать</a>
-        </li>
+          <li class="additional-goods__item add-product">
+            <h3 class="add-product__title">Питьевая вода</h3>
+            <table class="add-product__options">
+              <tr>
+                <td class="add-product__options-amount">5 литров</td>
+                <td class="add-product__options-cost">50 Р.</td>
+              </tr>
+            </table>
+            <a class="add-product__button button" href="#">Заказать</a>
+          </li>
 
-        <li class="additional-goods__item add-product">
-          <h3 class="add-product__title">Молоко</h3>
-          <table class="extra-product__options">
-            <tr>
-              <td class="extra-product__options-amount">1 литр</td>
-              <td class="extra-product__options-cost">100 Р.</td>
-            </tr>
-          </table>
-          <a class="extra-catalog__button button" href="#">Заказать</a>
-        </li>
+          <li class="additional-goods__item add-product">
+            <h3 class="add-product__title">Молоко</h3>
+            <table class="add-product__options">
+              <tr>
+                <td class="add-product__options-amount">1 литр</td>
+                <td class="add-product__options-cost">100 Р.</td>
+              </tr>
+            </table>
+            <a class="add-product__button button" href="#">Заказать</a>
+          </li>
 
-        <li class="additional-goods__item add-product">
-          <h3 class="add-product__title">Витамины</h3>
-          <table class="extra-product__options">
-            <tr>
-              <td class="extra-product__options-amount">1 упаковка (30 г)</td>
-              <td class="extra-product__options-cost">300 Р.</td>
-            </tr>
-          </table>
-          <a class="extra-catalog__button button" href="#">Заказать</a>
-        </li>
-      </ul>
+          <li class="additional-goods__item add-product">
+            <h3 class="add-product__title">Витамины</h3>
+            <table class="add-product__options">
+              <tr>
+                <td class="add-product__options-amount">1 упаковка (30 г)</td>
+                <td class="add-product__options-cost">300 Р.</td>
+              </tr>
+            </table>
+            <a class="add-product__button button" href="#">Заказать</a>
+          </li>
+        </ul>
+
+        <div class="promo">
+          <h2 class="visually-hidden">Промо-акция</h2>
+          <svg class="promo__image">
+            <use xlink:href="#icon-gift"></use>
+          </svg>
+          <p class="promo__text">Закажите все и&nbsp;получите&nbsp;чехол&nbsp;для кота в подарок!</p>
+        </div>
+      </div>
     </section>
 
-    <section class="promo">
-      <h2 class="visually-hidden">Промо-акция</h2>
-      <p class="promo__text">Закажите все и получите чехол для кота в подарок!</p>
-    </section>
-
-    <section class="cooperation">
-      <h2 class="cooperation___title">Приглашаем к сотрудничеству дилеров!</h2>
-      <p class="cooperation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    <section class="cooperation cooperation--gray">
+      <h2 class="visually-hidden">Адрес магазина и приглашение к сотрудничеству</h2>
+      <div class="cooperation__text-wrapper">
+        <b class="cooperation__title">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
+        <p class="cooperation__address">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8
+          <span>Санкт-Петербург</span>
+        </p>
+      </div>
       <div class="cooperation__map">
-        <iframe src="https://yandex.ru/map-widget/v1/-/CKubI--C" width="560" height="400" allowfullscreen=""></iframe>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab4f6043b3fef8a19740742b236bbfd79ef52920fda3041863dfe011bd153b11e&source=constructor"
+          width="320" height="363" allowfullscreen=""></iframe>
       </div>
     </section>
 

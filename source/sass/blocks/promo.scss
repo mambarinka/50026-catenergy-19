@@ -1,0 +1,48 @@
+.promo {
+  padding-top: 66px;
+  padding-bottom: 43px;
+
+  background-color: $main-green-color;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+
+  @include tablet {
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
+  }
+
+  @include desktop {
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
+  }
+}
+
+.promo__image {
+  position: relative;
+  left: calc(50% - 60px / 2);
+  width: 60px;
+  height: 60px;
+  margin-bottom: 58px;
+  fill: $bg-white-color;
+}
+
+.promo__text {
+  @include text-options (16px, 20px, 400, $bg-white-color, $font-main);
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 33px;
+
+  text-align: center;
+}

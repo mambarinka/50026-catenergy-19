@@ -1,0 +1,36 @@
+.add-product {
+  padding-top: 13px;
+}
+
+.add-product__title {
+  @include text-options (16px, 16px, 400, $subtitle-color, $font-title);
+  margin: 0;
+  margin-bottom: 10px;
+
+  text-transform: uppercase;
+}
+
+.add-product__options {
+  width: 100%;
+  margin-bottom: 12px;
+  border-collapse: collapse;
+}
+
+.add-product__options-amount {
+  width: 50%;
+}
+
+.add-product__options-cost {
+  width: 50%;
+
+  text-align: right;
+}
+
+.add-product__button {
+  margin-bottom: 17px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-size: 16px;
+  line-height: 20px;
+}
