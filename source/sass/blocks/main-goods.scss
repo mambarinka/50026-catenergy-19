@@ -55,6 +55,10 @@
 
       border: none;
     }
+
+    &:nth-last-child(2) {
+      margin-bottom: 73px;
+    }
   }
 
   @include desktop {

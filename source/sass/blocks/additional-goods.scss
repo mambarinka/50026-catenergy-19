@@ -22,6 +22,8 @@
   margin-bottom: 34px;
 
   line-height: 24px;
+
+  @include wrapper;
 }
 
 .additional-goods__list {

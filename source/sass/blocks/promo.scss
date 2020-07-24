@@ -1,11 +1,12 @@
 .promo {
-  padding-top: 66px;
-  padding-bottom: 43px;
+  position: relative;
+  padding-top: 188px;
+  padding-bottom: 41px;
 
   background-color: $main-green-color;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -30,7 +31,8 @@
 }
 
 .promo__image {
-  position: relative;
+  position: absolute;
+  top: 65px;
   left: calc(50% - 60px / 2);
   width: 60px;
   height: 60px;
@@ -42,7 +44,6 @@
   @include text-options (16px, 20px, 400, $bg-white-color, $font-main);
   width: 60%;
   margin: 0 auto;
-  margin-bottom: 33px;
 
   text-align: center;
 }
