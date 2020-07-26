@@ -6,6 +6,12 @@
 
     background-color: $bg-grey-color;
   }
+
+  @include tablet {
+    &--gray {
+      padding-top: 64px;
+    }
+  }
 }
 
 .cooperation__text-wrapper {
