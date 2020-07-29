@@ -1,0 +1,232 @@
+.main-goods {
+  padding-top: 15px;
+
+  @include tablet {
+    padding-top: 52px;
+  }
+
+  @include desktop {
+    padding-top: 71px;
+  }
+}
+
+.main-goods__title {
+  @include h2-model;
+  @include wrapper;
+  margin-bottom: 28px;
+
+  @include tablet {
+    margin-bottom: 165px;
+  }
+}
+
+.main-goods__list {
+  @include list-reset;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    @include wrapper;
+  }
+}
+
+.main-goods__item {
+  border-top: 1px solid #ededed;
+
+  &:last-child {
+    margin-bottom: 28px;
+
+    border-bottom: 1px solid #ededed;
+  }
+
+  @include tablet {
+    @include wrapper;
+    width: 50%;
+    margin-bottom: 140px;
+
+    border: none;
+
+    &:last-child {
+      margin: 0;
+
+      border: none;
+    }
+
+    &:nth-last-child(2) {
+      margin-bottom: 67px;
+    }
+  }
+
+  @include desktop {
+    width: 20%;
+    padding: 0;
+    margin: 0;
+    margin-right: 3%;
+    margin-bottom: 0;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    &:nth-child(5n-1) {
+      margin-bottom: 144px;
+    }
+
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 75px;
+    }
+  }
+}
+
+.main-goods__wrapper {
+  @include wrapper;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include tablet {
+    padding: 0;
+
+    background-color: $bg-grey-color;
+  }
+}
+
+.main-goods__photo-link {
+  width: 50%;
+  text-align: center;
+
+  @include tablet {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.main-goods__photo {
+  @include tablet {
+    position: absolute;
+    left: calc(50% - 324px / 2);
+
+    &--small {
+      top: -47px;
+    }
+
+    &--big {
+      top: -82px;
+    }
+  }
+
+  @include desktop {
+    left: calc(50% - 245px / 2);
+  }
+}
+
+.main-goods__description {
+  width: 50%;
+  padding-top: 21px;
+
+  @include tablet {
+    width: 100%;
+    padding-top: 164px;
+  }
+}
+
+.main-goods__link {
+  display: block;
+  margin-bottom: 13px;
+
+  @include tablet {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 19px;
+
+    text-align: center;
+  }
+
+  @include desktop {
+    width: 55%;
+  }
+}
+
+.main-goods__caption {
+  @include text-options (16px, 20px, 400, $title-color, $font-title);
+
+  width: 70%;
+  margin: 0;
+
+  text-transform: uppercase;
+
+  @include tablet {
+    width: 100%;
+
+    font-size: 20px;
+  }
+}
+
+.main-goods__table {
+  @include text-options (12px, 16px, 400, $text-color, $font-main);
+  width: 100%;
+
+  border-collapse: collapse;
+
+  & td {
+    padding: 0;
+  }
+
+  @include tablet {
+    width: 77%;
+    margin: 0 auto;
+    margin-bottom: 32px;
+
+    font-size: 16px;
+
+    & td {
+      padding-top: 7px;
+      padding-bottom: 8px;
+
+      border-bottom: 1px solid $border-table-color;
+    }
+  }
+
+  @include desktop {
+    width: 69%;
+    margin-bottom: 34px;
+
+    & td {
+      padding-bottom: 7px;
+    }
+  }
+}
+
+.main-goods__value {
+  text-align: right;
+}
+
+.main-goods__basket {
+  width: 100%;
+  margin-top: -4px;
+  margin-bottom: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  @include tablet {
+    width: 77%;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+
+  @include desktop {
+    width: 69%;
+  }
+}

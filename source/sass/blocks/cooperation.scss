@@ -1,5 +1,23 @@
 .cooperation {
   position: relative;
+
+  &--gray {
+    padding-top: 28px;
+
+    background-color: $bg-grey-color;
+  }
+
+  @include tablet {
+    &--gray {
+      padding-top: 64px;
+    }
+  }
+
+  @include desktop {
+    &--gray {
+      padding-top: 0;
+    }
+  }
 }
 
 .cooperation__text-wrapper {
@@ -17,7 +35,7 @@
 
   @include desktop {
     position: absolute;
-    top: 90px;
+    top: 96px;
     left: 7.6%;
     z-index: 1;
     width: 39.6%;
@@ -120,6 +138,7 @@
 
   @include desktop {
     width: 100%;
+    height: 400px;
     margin-bottom: 0;
     background-position-y: -3px;
 

@@ -1,0 +1,103 @@
+.show-all {
+  padding-top: 80px;
+
+  @include tablet {
+    padding-top: 0;
+  }
+}
+
+.show-all__wrapper {
+  @include wrapper;
+
+  @include tablet {
+    padding: 0;
+    padding-top: 163px;
+
+    background-color: transparent;
+    border: 1px solid #ededed;
+  }
+}
+
+.show-all__title {
+  @include text-options(16px, 20px, 400, $title-color, $font-title);
+  position: relative;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 7px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -54px;
+    left: calc(50% - 30px / 2);
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/icon-plus-mobile.svg");
+    opacity: 0.2;
+  }
+
+  @include tablet {
+    width: 52%;
+    margin: 0 auto;
+    margin-bottom: 27px;
+
+    font-size: 20px;
+
+    &::before {
+      top: -109px;
+      left: calc(50% - 60px / 2);
+      width: 60px;
+      height: 60px;
+      background-image: url("../img/icon-plus.svg");
+    }
+  }
+
+  @include desktop {
+    width: 58%;
+  }
+}
+
+.show-all__text {
+  @include text-options(12px, 16px, 400, $text-color, $font-main);
+
+  width: 100%;
+  margin: 0;
+  margin-bottom: 21px;
+
+  text-align: center;
+
+  @include tablet {
+    width: 52%;
+    margin: 0 auto;
+    margin-bottom: 85px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @include desktop {
+    width: 69%;
+  }
+}
+
+.show-all__button {
+  margin-bottom: 24px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+
+  @include tablet {
+    display: block;
+    width: 77%;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+
+  @include desktop {
+    width: 70%;
+    margin-bottom: 37px;
+  }
+}

@@ -202,6 +202,19 @@
   position: relative;
   text-transform: uppercase;
 
+
+  &:hover::after,
+  &:focus::after {
+    right: -56px;
+    width: 34px;
+
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -209,7 +222,9 @@
     right: -36px;
     width: 24px;
     height: 12px;
+
     background: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
   }
 
   @include tablet {

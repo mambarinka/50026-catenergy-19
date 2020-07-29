@@ -154,7 +154,11 @@
   }
 
   @include desktop {
-    width: 21%;
+    width: auto;
+    min-width: 21%;
     margin-bottom: 269px;
+    padding-left: 2.3%;
+    padding-right: 2.4%;
+    align-self: flex-start;
   }
 }

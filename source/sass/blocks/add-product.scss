@@ -1,0 +1,116 @@
+.add-product {
+  padding-top: 13px;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding-top: 25px;
+    padding-left: 5.4%;
+    padding-right: 5.3%;
+  }
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+    padding: 13px 0;
+  }
+}
+
+.add-product__title {
+  @include text-options (16px, 16px, 400, $subtitle-color, $font-title);
+  margin: 0;
+  margin-bottom: 10px;
+
+  text-transform: uppercase;
+
+  @include tablet {
+    width: 27%;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include desktop {
+    width: auto;
+    margin-bottom: 0;
+    margin-right: auto;
+
+    line-height: 38px;
+  }
+}
+
+.add-product__options {
+  width: 100%;
+  margin-bottom: 12px;
+  border-collapse: collapse;
+
+  @include tablet {
+    width: 50%;
+    margin-bottom: 19px;
+
+    @include text-options(16px, 25px, 400, #444444, $font-main);
+  }
+
+  @include desktop {
+    width: 32%;
+    margin-bottom: 0;
+
+    line-height: 41px;
+  }
+}
+
+.add-product__options-amount {
+  width: 50%;
+
+  @include tablet {
+    width: auto;
+
+    text-align: right;
+  }
+
+  @include desktop {
+    width: 84%;
+    padding: 0;
+    padding-top: 4px;
+
+    text-align: left;
+  }
+}
+
+.add-product__options-cost {
+  width: 50%;
+
+  text-align: right;
+
+  @include tablet {
+    width: 30%;
+  }
+
+  @include desktop {
+    padding: 0;
+    padding-top: 4px;
+
+    text-align: left;
+  }
+}
+
+.add-product__button {
+  margin-bottom: 17px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  @include tablet {
+    width: 100%;
+    margin-bottom: 27px;
+  }
+
+  @include desktop {
+    width: 27.4%;
+    margin-left: 4.3%;
+    margin-bottom: 0;
+  }
+}
