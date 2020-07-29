@@ -15,13 +15,24 @@
   @include tablet {
     &::before {
       top: 22px;
-      background-image: linear-gradient(to right, $main-green-color 3.9%, $bg-white-color 3.9%, $bg-white-color 57.4%, $main-green-color 57.4%);
+      background-image: linear-gradient(to right, $main-green-color 3.5%, $bg-white-color 3.95%, $bg-white-color 57.5%, $main-green-color 57.5%);
+    }
+  }
+
+  @include desktop {
+    &::before {
+      background-image: linear-gradient(to right, $main-green-color 4.9%, $bg-white-color 4.9%, $bg-white-color 33.5%, $main-green-color 33.5%);
     }
   }
 }
 
 .additional-goods__wrapper {
   @include wrapper;
+
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .additional-goods__title {
@@ -38,10 +49,20 @@
 
     line-height: 36px;
   }
+
+  @include desktop {
+    width: 100%;
+    padding-left: 0;
+  }
 }
 
 .additional-goods__list {
   @include list-reset;
+
+  @include desktop {
+    width: 73.4%;
+    margin-right: 6.6%;
+  }
 }
 
 .additional-goods__item {
