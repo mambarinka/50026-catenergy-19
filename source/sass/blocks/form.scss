@@ -1,0 +1,20 @@
+.form__list {
+  @include list-reset;
+}
+
+.form__item {
+  &:nth-child(-n+2) {
+    border-bottom: 1px solid #ededed;
+  }
+}
+
+.form__item-title {
+  @include h3-model;
+  @include wrapper;
+  line-height: 24px;
+}
+
+.form__option {
+  @include list-reset;
+  @include wrapper;
+}

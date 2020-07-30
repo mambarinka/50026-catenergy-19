@@ -1,0 +1,19 @@
+.form-main {
+  padding-top: 15px;
+}
+
+.form-main__title {
+  @include h2-model;
+  @include wrapper;
+  margin-bottom: 25px;
+}
+
+.form-main__text {
+  @include wrapper;
+  @include p-model;
+  width: 90%;
+  margin-bottom: 38px;
+
+  text-transform: uppercase;
+  font-family: $font-title;
+}

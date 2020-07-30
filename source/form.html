@@ -46,8 +46,8 @@
 
   <main class="form-main">
     <h1 class="form-main__title">Подбор программы</h1>
-    <p class="form-main__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
-      свяжемся с вами, чтобы уточнить детали.</p>
+    <p class="form-main__text">Заполните анкету и мы подберем
+      программу питания для вашего кота</p>
 
     <form class="form" action="https://echo.htmlacademy.ru" method="get">
       <ul class="form__list">
@@ -55,16 +55,16 @@
           <h2 class="visually-hidden">Анкета и данные кота</h2>
           <ul class="form__option option__list">
             <li class="option__item">
-              <label class="option__label option__text" for="name">Имя:*</label>
-              <input class="option__input" id="name" type="text" name="name" placeholder="Барсик" required>
+              <label class="option__label option__label--text" for="name">Имя:*</label>
+              <input class="option__input option__input--text" id="name" type="text" name="name" placeholder="Барсик" required>
             </li>
             <li class="option__item">
-              <label class="option__label option__text" for="weight">Вес (кг):*</label>
-              <input class="option__input" id="weight" type="text" name="weight" placeholder="7" required>
+              <label class="option__label option__label--text" for="weight">Вес (кг):*</label>
+              <input class="option__input option__input--text" id="weight" type="text" name="weight" placeholder="7" required>
             </li>
             <li class="option__item">
-              <label class="option__label option__text" for="age">Возраст (лет):</label>
-              <input class="option__input" id="age" type="text" name="age" placeholder="7">
+              <label class="option__label option__label--text" for="age">Возраст (лет):</label>
+              <input class="option__inpu option__input--text" id="age" type="text" name="age" placeholder="7">
             </li>
           </ul>
         </li>
@@ -73,16 +73,16 @@
           <h2 class="visually-hidden">Выбор программы</h2>
           <ul class="form__option option__list">
             <li class="option__item">
-              <input class="option__input" id="losing-weight" type="radio" name="type" value="losing-weight" checked>
-              <label class="option__label option__radio" for="losing-weight">Похудение</label>
+              <input class="option__input visually-hidden" id="losing-weight" type="radio" name="type" value="losing-weight" checked>
+              <label class="option__label option__label--radio" for="losing-weight">Похудение</label>
             </li>
             <li class="option__item">
-              <input class="option__input" id="get-fat" type="radio" name="type" value="get-fat">
-              <label class="option__label option__radio" for="get-fat">Набор массы</label>
+              <input class="option__input visually-hidden" id="get-fat" type="radio" name="type" value="get-fat">
+              <label class="option__label option__label--radio" for="get-fat">Набор массы</label>
             </li>
             <li class="option__item">
-              <input class="option__input" id="need-advice" type="radio" name="type" value="need-advice">
-              <label class="option__label option__radio" for="need-advice">Не знаю (нужен ваш совет)</label>
+              <input class="option__input visually-hidden" id="need-advice" type="radio" name="type" value="need-advice">
+              <label class="option__label option__label--radio" for="need-advice">Не знаю (нужен ваш совет)</label>
             </li>
           </ul>
         </li>
