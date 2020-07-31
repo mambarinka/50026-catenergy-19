@@ -1,23 +1,41 @@
 .option__item {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 13px;
 
-  &:last-child {
+  &--more {
     margin-bottom: 23px;
+  }
+
+  &--radio {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 28px;
+    }
+  }
+
+  &--less {
+    margin-bottom: 0;
+  }
+
+  .option--add & {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 42px;
+    }
   }
 }
 
 .option__label {
   @include text-options(16px, 18px, 400, $subtitle-color, $font-title);
   flex-shrink: 0;
+  margin-right: 5.3%;
 
   text-transform: uppercase;
-
-  &--text {
-    margin-right: 5.3%;
-  }
 
   &--radio {
     position: relative;
@@ -29,7 +47,7 @@
     content: "";
     display: inline-block;
     position: absolute;
-    top: 4px;
+    top: -6px;
     left: 0;
     width: 30px;
     height: 30px;
@@ -41,7 +59,7 @@
     content: "";
     display: inline-block;
     position: absolute;
-    top: 13px;
+    top: 3px;
     left: 9px;
     width: 12px;
     height: 12px;
@@ -49,21 +67,59 @@
     border: 2px solid $main-green-color;
     border-radius: 50%;
   }
+
+  &--checkbox {
+    position: relative;
+    flex-grow: 1;
+    padding-left: 16.3%;
+  }
+
+  .option__input + &--checkbox::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $border-table-color;
+  }
+
+  .option__input:checked + &--checkbox::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    width: 21px;
+    height: 162px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--less {
+    margin-right: 3.7%;
+  }
 }
 
 .option__input {
-  width: auto;
+  width: 100%;
+  padding: 16px 4.9% 12px 5%;
 
-  &--text {
-    width: 100%;
-    padding: 16px 5% 12px 5%;
+  border: 1px solid rgba(205, 205, 205, 0.5);
 
-    border: 1px solid rgba(205, 205, 205, 0.5);
-
-    &::placeholder {
-      @include text-options(16px, 18px, 400, $text-color, $font-title);
-      text-transform: uppercase;
-      vertical-align: middle;
-    }
+  &::placeholder {
+    @include text-options(16px, 18px, 400, $text-color, $font-title);
+    text-transform: uppercase;
+    vertical-align: middle;
   }
+
+  &--comments {
+    min-height: 152px;
+  }
+}
+
+.option__icon {
+  position: absolute;
+  right: 14px;
 }

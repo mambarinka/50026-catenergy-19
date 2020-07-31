@@ -55,16 +55,16 @@
           <h2 class="visually-hidden">Анкета и данные кота</h2>
           <ul class="form__option option__list">
             <li class="option__item">
-              <label class="option__label option__label--text" for="name">Имя:*</label>
-              <input class="option__input option__input--text" id="name" type="text" name="name" placeholder="Барсик" required>
+              <label class="option__label" for="name">Имя:*</label>
+              <input class="option__input" id="name" type="text" name="name" placeholder="Барсик" required>
             </li>
             <li class="option__item">
-              <label class="option__label option__label--text" for="weight">Вес (кг):*</label>
-              <input class="option__input option__input--text" id="weight" type="text" name="weight" placeholder="7" required>
+              <label class="option__label" for="weight">Вес (кг):*</label>
+              <input class="option__input" id="weight" type="text" name="weight" placeholder="7" required>
             </li>
-            <li class="option__item">
-              <label class="option__label option__label--text" for="age">Возраст (лет):</label>
-              <input class="option__inpu option__input--text" id="age" type="text" name="age" placeholder="7">
+            <li class="option__item option__item--more">
+              <label class="option__label" for="age">Возраст (лет):</label>
+              <input class="option__input" id="age" type="text" name="age" placeholder="7">
             </li>
           </ul>
         </li>
@@ -72,34 +72,34 @@
         <li class="form__item option">
           <h2 class="visually-hidden">Выбор программы</h2>
           <ul class="form__option option__list">
-            <li class="option__item">
+            <li class="option__item option__item--radio">
               <input class="option__input visually-hidden" id="losing-weight" type="radio" name="type" value="losing-weight" checked>
               <label class="option__label option__label--radio" for="losing-weight">Похудение</label>
             </li>
-            <li class="option__item">
+            <li class="option__item option__item--radio">
               <input class="option__input visually-hidden" id="get-fat" type="radio" name="type" value="get-fat">
               <label class="option__label option__label--radio" for="get-fat">Набор массы</label>
             </li>
-            <li class="option__item">
+            <li class="option__item option__item--radio">
               <input class="option__input visually-hidden" id="need-advice" type="radio" name="type" value="need-advice">
               <label class="option__label option__label--radio" for="need-advice">Не знаю (нужен ваш совет)</label>
             </li>
           </ul>
         </li>
 
-        <li class="form__item option">
+        <li class="form__item form__item--contacts option">
           <h2 class="form__item-title">Контактные данные (владельца кота)</h2>
           <ul class="form__option option__list">
             <li class="option__item">
-              <label class="option__label" for="email">E-mail:*</label>
+              <label class="option__label option__label--less" for="email">E-mail:*</label>
               <input class="option__input" type="email" name="email" id="email" placeholder="Kuklachev@gmail.com"
                 required>
               <svg class="option__icon option__icon--email" width="17" height="13">
                 <use xlink:href="#icon-mail"></use>
               </svg>
             </li>
-            <li class="option__item">
-              <label class="option__label" for="tel">Телефон:*</label>
+            <li class="option__item option__item--less">
+              <label class="option__label option__label--less" for="tel">Телефон:*</label>
               <input class="option__input" type="tel" name="tel" id="tel" pattern="\8\s?\d{3}\s?\d{3}\s?\d{2}\s?\d{2}"
                 placeholder="8 (960) 900-60-90" required>
               <svg class="option__icon" width="20" height="20">
@@ -109,47 +109,56 @@
           </ul>
         </li>
 
-        <li class="form__item option">
+        <li class="form__item form__item--comments option">
           <label class="form__item-title" for="comment">Комментарий</label>
-          <textarea class="option__input" name="comment" id="comment"
+          <textarea class="option__input option__input--comments" name="comment" id="comment"
             placeholder="Расскажите обо всех повадках кота"></textarea>
         </li>
 
-        <li class="form__item option">
+        <li class="form__item form__item--add option option--add">
           <h2 class="form__item-title">Дополнительно</h2>
           <ul class="form__option option__list">
             <li class="option__item">
-              <input class="option__input" id="sweetener" type="checkbox" name="sweetener" checked>
-              <label class="option__label option__checkbox" for="sweetener">Сахарозаменитель</label>
+              <input class="option__input visually-hidden" id="sweetener" type="checkbox" name="sweetener" checked>
+              <label class="option__label option__label--checkbox" for="sweetener">Сахарозаменитель</label>
             </li>
             <li class="option__item">
-              <input class="option__input" id="water" type="checkbox" name="water">
-              <label class="option__label option__checkbox" for="water">Питьевая вода</label>
+              <input class="option__input visually-hidden" id="water" type="checkbox" name="water">
+              <label class="option__label option__label--checkbox" for="water">Питьевая вода</label>
             </li>
             <li class="option__item">
-              <input class="option__input" id="milk" type="checkbox" name="milk">
-              <label class="option__label option__checkbox" for="milk">Молоко</label>
+              <input class="option__input visually-hidden" id="milk" type="checkbox" name="milk">
+              <label class="option__label option__label--checkbox" for="milk">Молоко</label>
             </li>
             <li class="option__item">
-              <input class="option__input" id="vitamins" type="checkbox" name="vitamins">
-              <label class="option__label option__checkbox" for="vitamins">Витамины</label>
+              <input class="option__input visually-hidden" id="vitamins" type="checkbox" name="vitamins">
+              <label class="option__label option__label--checkbox" for="vitamins">Витамины</label>
             </li>
           </ul>
         </li>
       </ul>
 
+      <div class="form__button-wrapper">
       <button class="form__button button" type="submit">Отправить заявку</button>
       <small class="form__small">
-        <sup>*</sup>- Обязательные поля
+        * — Обязательные поля
       </small>
+    </div>
 
     </form>
 
-    <section class="cooperation">
-      <h2 class="cooperation___title">Приглашаем к сотрудничеству дилеров!</h2>
-      <p class="cooperation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    <section class="cooperation cooperation--gray">
+      <h2 class="visually-hidden">Адрес магазина и приглашение к сотрудничеству</h2>
+      <div class="cooperation__text-wrapper">
+        <b class="cooperation__title">Приглашаем к&nbsp;сотрудничеству дилеров!</b>
+        <p class="cooperation__address">ул. Большая Конюшенная,&nbsp;д.&nbsp;19/8
+          <span>Санкт-Петербург</span>
+        </p>
+      </div>
       <div class="cooperation__map">
-        <iframe src="https://yandex.ru/map-widget/v1/-/CKubI--C" width="560" height="400" allowfullscreen=""></iframe>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab4f6043b3fef8a19740742b236bbfd79ef52920fda3041863dfe011bd153b11e&source=constructor"
+          width="320" height="363" allowfullscreen=""></iframe>
       </div>
     </section>
 
