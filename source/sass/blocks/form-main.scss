@@ -1,11 +1,19 @@
 .form-main {
   padding-top: 15px;
+
+  @include tablet {
+    padding-top: 52px;
+  }
 }
 
 .form-main__title {
   @include h2-model;
   @include wrapper;
   margin-bottom: 25px;
+
+  @include tablet {
+    margin-bottom: 56px;
+  }
 }
 
 .form-main__text {
@@ -16,4 +24,13 @@
 
   text-transform: uppercase;
   font-family: $font-title;
+
+  @include tablet {
+    @include wrapper-form;
+    width: 68%;
+    margin-bottom: 65px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

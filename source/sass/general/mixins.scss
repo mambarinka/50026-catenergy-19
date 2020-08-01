@@ -34,6 +34,13 @@
   }
 }
 
+@mixin wrapper-form() {
+  @include tablet {
+    padding-left: 9.2%;
+    padding-right: 8.7%;
+  }
+}
+
 @mixin list-reset() {
   list-style: none;
   padding: 0;

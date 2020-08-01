@@ -7,7 +7,7 @@
     border-bottom: 1px solid #ededed;
   }
 
-  &:nth-child(2) {
+  &--radio {
     padding-top: 26px;
   }
 
@@ -50,6 +50,44 @@
       background-image: linear-gradient(to right, $bg-white-color 57.5%, $main-green-color 57.5%);
     }
   }
+
+  @include tablet {
+    &:nth-child(-n+2) {
+      border-bottom: none;
+    }
+
+    &--contacts,
+    &--comments,
+    &--add {
+      padding-top: 81px;
+
+      &::before {
+        top: 97px;
+      }
+    }
+
+    &--contacts {
+      &::before {
+        background-image: linear-gradient(to right, $main-green-color 3.9%, $bg-white-color 3.9%, $bg-white-color 81.1%, $main-green-color 81.1%);
+      }
+    }
+
+    &--comments {
+      &::before {
+        background-image: linear-gradient(to right, $main-green-color 3.9%, $bg-white-color 3.9%, $bg-white-color 44.75%, $main-green-color 44.75%);
+      }
+    }
+
+    &--add {
+      &::before {
+        background-image: linear-gradient(to right, $main-green-color 3.9%, $bg-white-color 3.9%, $bg-white-color 57.5%, $main-green-color 57.5%);
+      }
+    }
+  }
+}
+
+.form__item-wrapper {
+  @include wrapper-form;
 }
 
 .form__item-title {
@@ -67,11 +105,30 @@
   .form__item--add & {
     margin-bottom: 40px;
   }
+
+  @include tablet {
+    @include wrapper-form;
+
+    /* .form__item--comments & {
+      padding: 0;
+      @include wrapper-form;
+    } */
+  }
 }
 
 .form__option {
   @include list-reset;
   @include wrapper;
+
+  @include tablet {
+    @include wrapper-form;
+
+    .form__item--radio & {
+      padding: 0;
+
+      border: 1px solid rgba(205, 205, 205, 0.5);
+    }
+  }
 }
 
 .form__button-wrapper {
