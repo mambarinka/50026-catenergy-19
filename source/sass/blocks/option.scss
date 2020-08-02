@@ -3,6 +3,12 @@
     .option--radio & {
       padding-top: 33px;
     }
+
+    .option--add & {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
   }
 }
 
@@ -51,6 +57,38 @@
         margin-bottom: 35px;
       }
     }
+
+    .option--add & {
+      width: 42%;
+      margin-bottom: 54px;
+
+      &:nth-child(odd) {
+        margin-right: 12.5%;
+      }
+
+      &:nth-last-child(2) {
+        margin-bottom: 63px;
+      }
+    }
+  }
+
+  @include desktop {
+    .option--contacts & {
+      width: 46.7%;
+
+      &:nth-child(odd) {
+        margin-right: auto;
+      }
+    }
+
+    .option--add & {
+      width: auto;
+    }
+
+    .option--contacts & {
+      margin-bottom: 75px;
+    }
+
   }
 }
 
@@ -116,7 +154,7 @@
     top: 3px;
     left: 5px;
     width: 21px;
-    height: 162px;
+    height: 16px;
     background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
   }
@@ -148,6 +186,34 @@
       left: 38px;
       width: 18px;
       height: 18px;
+    }
+
+    .option--contacts & {
+      margin-right: 2.7%;
+    }
+
+    .option--add & {
+      padding-left: 22.3%;
+    }
+
+    .option--add .option__input+&::before {
+      top: -9px;
+      width: 39px;
+      height: 39px;
+    }
+
+    .option--add .option__input:checked+&::after {
+      left: 9px;
+    }
+  }
+
+  @include desktop {
+    .option--radio & {
+      padding-left: 15.1%;
+    }
+
+    .option--contacts & {
+      margin-right: 3.1%;
     }
   }
 }
@@ -181,10 +247,18 @@
       font-size: 20px;
       line-height: 20px;
     }
+
+    .option--comments & {
+      min-height: 170px;
+    }
   }
 }
 
 .option__icon {
   position: absolute;
   right: 14px;
+
+  @include tablet {
+    right: 17px;
+  }
 }

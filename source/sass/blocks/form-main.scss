@@ -4,6 +4,10 @@
   @include tablet {
     padding-top: 52px;
   }
+
+  @include tablet {
+    padding-top: 71px;
+  }
 }
 
 .form-main__title {
@@ -32,5 +36,12 @@
 
     font-size: 20px;
     line-height: 30px;
+  }
+
+  @include desktop {
+    width: 35%;
+    margin: 0;
+    margin-bottom: 64px;
+    padding-left: 7.85%;
   }
 }

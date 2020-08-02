@@ -39,6 +39,13 @@
     padding-left: 9.2%;
     padding-right: 8.7%;
   }
+
+  @include desktop {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-left: 2.85%;
+    padding-right: 2.85%;
+  }
 }
 
 @mixin list-reset() {
