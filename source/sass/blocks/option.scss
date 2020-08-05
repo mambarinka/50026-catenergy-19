@@ -75,20 +75,23 @@
   @include desktop {
     .option--contacts & {
       width: 46.7%;
+      margin-bottom: 75px;
 
       &:nth-child(odd) {
         margin-right: auto;
       }
     }
 
-    .option--add & {
-      width: auto;
-    }
+    .option--add &,
+    .option--add &:nth-child(odd) {
+      width: 20%;
+      margin-right: auto;
+      margin-bottom: 73px;
 
-    .option--contacts & {
-      margin-bottom: 75px;
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
     }
-
   }
 }
 
@@ -105,7 +108,7 @@
     padding-left: 16.3%;
   }
 
-  .option--radio .option__input+&::before {
+  .option--radio .option__input + &::before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -117,7 +120,7 @@
     border-radius: 50%;
   }
 
-  .option--radio .option__input:checked+&::after {
+  .option--radio .option__input:checked + &::after {
     content: "";
     display: inline-block;
     position: absolute;
@@ -136,7 +139,7 @@
     padding-left: 16.3%;
   }
 
-  .option--add .option__input+&::before {
+  .option--add .option__input + &::before {
     content: "";
     display: inline-block;
     position: absolute;
@@ -147,7 +150,7 @@
     border: 1px solid $border-table-color;
   }
 
-  .option--add .option__input:checked+&::after {
+  .option--add .option__input:checked + &::after {
     content: "";
     display: inline-block;
     position: absolute;
@@ -173,14 +176,14 @@
       padding-left: 13.8%;
     }
 
-    .option--radio .option__input+&::before {
+    .option--radio .option__input + &::before {
       top: -9px;
       left: 27px;
       width: 40px;
       height: 40px;
     }
 
-    .option--radio .option__input:checked+&::after {
+    .option--radio .option__input:checked + &::after {
       content: "";
       top: 2px;
       left: 38px;
@@ -196,13 +199,13 @@
       padding-left: 22.3%;
     }
 
-    .option--add .option__input+&::before {
+    .option--add .option__input + &::before {
       top: -9px;
       width: 39px;
       height: 39px;
     }
 
-    .option--add .option__input:checked+&::after {
+    .option--add .option__input:checked + &::after {
       left: 9px;
     }
   }
@@ -210,10 +213,6 @@
   @include desktop {
     .option--radio & {
       padding-left: 15.1%;
-    }
-
-    .option--contacts & {
-      margin-right: 3.1%;
     }
   }
 }
@@ -250,6 +249,17 @@
 
     .option--comments & {
       min-height: 170px;
+    }
+  }
+
+  @include desktop {
+    .option--contacts & {
+      padding: 10px 3.7%;
+    }
+
+    .option--comments & {
+      min-height: 174px;
+      padding: 14px 1.7%;
     }
   }
 }

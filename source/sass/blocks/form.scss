@@ -122,20 +122,22 @@
     }
 
     &--comments {
+      max-width: 100%;
       padding: 0;
+      margin: 0;
 
       &::before {
-        /* top: 45px; */
+        top: 13px;
 
-        background-image: linear-gradient(to right, $main-green-color 4.9%, $bg-white-color 4.9%, $bg-white-color 37.6%, $main-green-color 37.6%);
+        background-image: linear-gradient(to right, $main-green-color 4.9%, $bg-white-color 4.9%, $bg-white-color 23%, $main-green-color 23%);
       }
     }
 
     &--add {
       &::before {
-        /* top: 45px; */
+        top: 85px;
 
-        background-image: linear-gradient(to right, $main-green-color 4.9%, $bg-white-color 4.9%, $bg-white-color 37.6%, $main-green-color 37.6%);
+        background-image: linear-gradient(to right, $main-green-color 4.9%, $bg-white-color 4.9%, $bg-white-color 25.2%, $main-green-color 25.2%);
       }
     }
   }
@@ -146,6 +148,10 @@
 
   @include desktop {
     padding: 0;
+
+    .form__item--comments & {
+      @include wrapper;
+    }
   }
 }
 
@@ -182,7 +188,11 @@
     }
   }
 
-  @include desktop {}
+  @include desktop {
+    .form__item--comments & {
+      margin-bottom: 79px;
+    }
+  }
 }
 
 .form__option {
@@ -209,6 +219,11 @@
       padding-left: 2.85%;
       padding-right: 2.85%;
     }
+
+    .form__item--add & {
+      padding-left: 2.85%;
+      padding-right: 2.85%;
+    }
   }
 }
 
@@ -221,6 +236,10 @@
     display: flex;
     align-items: center;
     margin-bottom: 73px;
+  }
+
+  @include desktop {
+    margin-bottom: 83px;
   }
 }
 
@@ -240,6 +259,11 @@
 
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @include desktop {
+    margin-right: 6.8%;
+    padding: 16px 17%;
   }
 }
 
