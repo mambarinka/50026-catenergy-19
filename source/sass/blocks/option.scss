@@ -39,7 +39,7 @@
     margin-bottom: 24px;
 
     &:last-child {
-      margin-bottom: 42px;
+      margin-bottom: 41px;
     }
   }
 
@@ -219,7 +219,7 @@
 
 .option__input {
   width: 100%;
-  padding: 14px 4.9% 12px 5%;
+  padding: 14px 13px 12px;
 
   @include text-options(16px, 18px, 400, $text-color, $font-title);
   text-transform: uppercase;
@@ -236,8 +236,25 @@
     min-height: 152px;
   }
 
+  &:hover,
+  &:focus {
+    border: 1px solid $border-table-color;
+  }
+
+  &:active {
+    padding: 13px 12px 11px;
+
+    border: 2px solid $text-color;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    padding: 13px 12px 11px;
+
+    border: 2px solid #ff8282;
+  }
+
   @include tablet {
-    padding: 10px 2.9%;
+    padding: 10px 16px;
 
     font-size: 20px;
     line-height: 20px;
@@ -250,16 +267,40 @@
     .option--comments & {
       min-height: 170px;
     }
+
+    &:active {
+      padding: 9px 15px;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      padding: 9px 15px;
+    }
   }
 
   @include desktop {
     .option--contacts & {
-      padding: 10px 3.7%;
+      padding: 8px 24px 11px;
+
+      &:active {
+        padding: 7px 23px 10px;
+      }
+
+      &:invalid:not(:placeholder-shown) {
+        padding: 7px 23px 10px;
+      }
     }
 
     .option--comments & {
       min-height: 174px;
-      padding: 14px 1.7%;
+      padding: 14px 17px;
+
+      &:active {
+        padding: 13px 16px;
+      }
+
+      &:invalid:not(:placeholder-shown) {
+        padding: 13px 16px;
+      }
     }
   }
 }

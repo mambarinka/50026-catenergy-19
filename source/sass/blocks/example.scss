@@ -289,6 +289,7 @@
 
   text-transform: uppercase;
   border: none;
+  cursor: pointer;
 
   @include tablet {
     padding: 0;
@@ -296,6 +297,18 @@
     font-size: 20px;
 
     border-bottom: 1px dotted #bebebe;
+
+    &:hover,
+    &:focus {
+      border-bottom: 1px solid #989898;
+      outline: none;
+    }
+
+    &:active {
+      padding-bottom: 6px;
+
+      border: none;
+    }
 
     &--before {
       margin-right: 24px;
@@ -339,6 +352,8 @@
   background-color: $main-green-color;
   border: 1px solid $main-green-color;
   border-radius: 3px;
+  cursor: pointer;
+  outline: none;
 
   &--after {
     left: 51%;
@@ -366,11 +381,21 @@
     }
 
     &--before {
-      left: 0;
+      left: -1px;
     }
 
     &--after {
       left: calc(100% - 17px);
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      border: 2px solid $main-green-color;
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
     }
   }
 }

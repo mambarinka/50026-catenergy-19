@@ -88,6 +88,16 @@
   padding-top: 11px;
   padding-bottom: 9px;
 
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: $text-color;
+    opacity: 0.3;
+  }
+
   @include tablet {
     display: block;
     width: 77%;
