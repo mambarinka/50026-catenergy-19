@@ -256,8 +256,6 @@
   padding-top: 10px;
   padding-bottom: 10px;
 
-  white-space: nowrap;
-
   border: none;
 
   @include tablet {
@@ -273,6 +271,8 @@
   @include desktop {
     margin-right: 6.8%;
     padding: 16px 17%;
+
+    white-space: nowrap;
   }
 }
 

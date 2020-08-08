@@ -31,6 +31,15 @@
 
 .social-list__link {
   font-size: 0;
+
+  &:hover .social-list__icon,
+  &:focus .social-list__icon {
+    fill: $main-green-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .social-list__icon {

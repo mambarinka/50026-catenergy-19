@@ -118,6 +118,7 @@
     height: 30px;
     border: 1px solid $border-table-color;
     border-radius: 50%;
+    cursor: pointer;
   }
 
   .option--radio .option__input:checked + &::after {
@@ -131,6 +132,7 @@
     background-color: $main-green-color;
     border: 2px solid $main-green-color;
     border-radius: 50%;
+    cursor: pointer;
   }
 
   .option--add & {
@@ -148,6 +150,7 @@
     width: 30px;
     height: 30px;
     border: 1px solid $border-table-color;
+    cursor: pointer;
   }
 
   .option--add .option__input:checked + &::after {
@@ -160,6 +163,19 @@
     height: 16px;
     background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .option--radio .option__input + &:hover::before,
+  .option--radio .option__input + &:focus::before,
+  .option--add .option__input + &:hover::before,
+  .option--add .option__input + &:focus::before {
+    border: 1px solid #bababa;
+  }
+
+  .option--radio .option__input + &:active::before,
+  .option--add .option__input + &:active::before {
+    opacity: 0.3;
   }
 
   .option--contacts & {
@@ -308,6 +324,15 @@
 .option__icon {
   position: absolute;
   right: 14px;
+
+  .option--contacts .option__input:hover + &,
+  .option--contacts .option__input:focus + & {
+    fill: $main-green-color;
+  }
+
+  .option--contacts .option__input:invalid:not(:placeholder-shown) + & {
+    fill: #ff8282;
+  }
 
   @include tablet {
     right: 17px;

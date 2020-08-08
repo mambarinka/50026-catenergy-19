@@ -81,7 +81,7 @@
     }
 
     &:last-child {
-      margin-bottom: 75px;
+      margin-bottom: 72px;
     }
   }
 }
@@ -220,13 +220,16 @@
   line-height: 20px;
 
   @include tablet {
-    width: 77%;
+    width: auto;
     margin: 0 auto;
     margin-top: 0;
     margin-bottom: 40px;
+    padding: 10px 29%;
   }
 
   @include desktop {
-    width: 69%;
+    width: auto;
+    padding-left: 22%;
+    padding-right: 22%;
   }
 }
