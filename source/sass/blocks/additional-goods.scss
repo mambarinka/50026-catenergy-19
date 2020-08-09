@@ -38,21 +38,22 @@
 .additional-goods__title {
   @include h3-model;
   margin-bottom: 34px;
+  padding-left: 6%;
 
   line-height: 24px;
 
 
   @include tablet {
     width: 60%;
-    padding-left: 5%;
+    padding-left: 9%;
     margin-bottom: 80px;
 
     line-height: 36px;
   }
 
   @include desktop {
-    width: 100%;
-    padding-left: 0;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
   }
 }
 
