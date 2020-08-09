@@ -10,6 +10,8 @@
   @include wrapper;
 
   @include tablet {
+    display: flex;
+    flex-direction: column;
     padding: 0;
     padding-top: 163px;
 
@@ -88,16 +90,27 @@
   padding-top: 11px;
   padding-bottom: 9px;
 
+  &:hover,
+  &:focus {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    color: $text-color;
+    opacity: 0.3;
+  }
+
   @include tablet {
-    display: block;
-    width: 77%;
+    width: auto;
     margin: 0 auto;
     margin-top: 0;
     margin-bottom: 40px;
+    padding: 10px 24.6%;
   }
 
   @include desktop {
-    width: 70%;
-    margin-bottom: 37px;
+    width: auto;
+    padding-left: 17%;
+    padding-right: 17%;
   }
 }

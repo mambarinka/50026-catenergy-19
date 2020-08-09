@@ -34,6 +34,18 @@
   }
 }
 
+@mixin wrapper-form() {
+  @include tablet {
+    padding-left: 9.2%;
+    padding-right: 8.7%;
+  }
+
+  @include desktop {
+    padding-left: 2.85%;
+    padding-right: 2.85%;
+  }
+}
+
 @mixin list-reset() {
   list-style: none;
   padding: 0;
@@ -101,17 +113,3 @@
   color: $color;
   font-family: $font-family;
 }
-
-
-/* .container() {
-  width: 320px;
-  margin: 0 auto;
-
-  @media @tablet {
-    width: 768px;
-  }
-
-  @media @desktop {
-    width: 1150px;
-  }
-} */

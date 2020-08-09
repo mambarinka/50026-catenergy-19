@@ -1,0 +1,340 @@
+.option__list {
+  @include tablet {
+    .option--radio & {
+      padding-top: 33px;
+    }
+
+    .option--add & {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+  }
+}
+
+.option__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+
+  .option--text &:last-child {
+    margin-bottom: 23px;
+  }
+
+  .option--radio & {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 28px;
+    }
+  }
+
+  .option--contacts &:last-child {
+    margin-bottom: 0;
+  }
+
+  .option--add & {
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 41px;
+    }
+  }
+
+  @include tablet {
+    margin-bottom: 20px;
+
+    .option--text &:last-child {
+      margin-bottom: 46px;
+    }
+
+    .option--radio & {
+      margin-bottom: 33px;
+
+      &:last-child {
+        margin-bottom: 35px;
+      }
+    }
+
+    .option--add & {
+      width: 42%;
+      margin-bottom: 54px;
+
+      &:nth-child(odd) {
+        margin-right: 12.5%;
+      }
+
+      &:nth-last-child(2) {
+        margin-bottom: 63px;
+      }
+    }
+  }
+
+  @include desktop {
+    .option--contacts & {
+      width: 46.7%;
+      margin-bottom: 75px;
+
+      &:nth-child(odd) {
+        margin-right: auto;
+      }
+    }
+
+    .option--add &,
+    .option--add &:nth-child(odd) {
+      width: 20%;
+      margin-right: auto;
+      margin-bottom: 73px;
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.option__label {
+  @include text-options(16px, 18px, 400, $subtitle-color, $font-title);
+  flex-shrink: 0;
+  margin-right: 5.3%;
+
+  text-transform: uppercase;
+
+  .option--radio & {
+    position: relative;
+    flex-grow: 1;
+    padding-left: 16.3%;
+  }
+
+  .option--radio .option__input + &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $border-table-color;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .option--radio .option__input:checked + &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: 9px;
+    width: 12px;
+    height: 12px;
+    background-color: $main-green-color;
+    border: 2px solid $main-green-color;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .option--add & {
+    position: relative;
+    flex-grow: 1;
+    padding-left: 16.3%;
+  }
+
+  .option--add .option__input + &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $border-table-color;
+    cursor: pointer;
+  }
+
+  .option--add .option__input:checked + &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    width: 21px;
+    height: 16px;
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .option--radio .option__input + &:hover::before,
+  .option--radio .option__input + &:focus::before,
+  .option--add .option__input + &:hover::before,
+  .option--add .option__input + &:focus::before {
+    border: 1px solid #bababa;
+  }
+
+  .option--radio .option__input + &:active::before,
+  .option--add .option__input + &:active::before {
+    opacity: 0.3;
+  }
+
+  .option--contacts & {
+    margin-right: 3.7%;
+  }
+
+  @include tablet {
+    margin-right: 2.8%;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    .option--radio & {
+      padding-left: 13.8%;
+    }
+
+    .option--radio .option__input + &::before {
+      top: -9px;
+      left: 27px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .option--radio .option__input:checked + &::after {
+      content: "";
+      top: 2px;
+      left: 38px;
+      width: 18px;
+      height: 18px;
+    }
+
+    .option--contacts & {
+      margin-right: 2.7%;
+    }
+
+    .option--add & {
+      padding-left: 22.3%;
+    }
+
+    .option--add .option__input + &::before {
+      top: -9px;
+      width: 39px;
+      height: 39px;
+    }
+
+    .option--add .option__input:checked + &::after {
+      left: 9px;
+    }
+  }
+
+  @include desktop {
+    .option--radio & {
+      padding-left: 15.1%;
+    }
+  }
+}
+
+.option__input {
+  width: 100%;
+  padding: 14px 13px 12px;
+
+  @include text-options(16px, 18px, 400, $text-color, $font-title);
+  text-transform: uppercase;
+
+  border: 1px solid rgba(205, 205, 205, 0.5);
+
+  &::placeholder {
+    @include text-options(16px, 18px, 400, $text-color, $font-title);
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+
+  .option--comments & {
+    min-height: 152px;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $border-table-color;
+  }
+
+  &:active {
+    padding: 13px 12px 11px;
+
+    border: 2px solid $text-color;
+  }
+
+  &:invalid:not(:placeholder-shown) {
+    padding: 13px 12px 11px;
+
+    border: 2px solid #ff8282;
+  }
+
+  @include tablet {
+    padding: 10px 16px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    .option--comments & {
+      min-height: 170px;
+    }
+
+    &:active {
+      padding: 9px 15px;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+      padding: 9px 15px;
+    }
+  }
+
+  @include desktop {
+    .option--contacts & {
+      padding: 8px 24px 11px;
+
+      &:active {
+        padding: 7px 23px 10px;
+      }
+
+      &:invalid:not(:placeholder-shown) {
+        padding: 7px 23px 10px;
+      }
+    }
+
+    .option--comments & {
+      min-height: 174px;
+      padding: 14px 17px;
+
+      &:active {
+        padding: 13px 16px;
+      }
+
+      &:invalid:not(:placeholder-shown) {
+        padding: 13px 16px;
+      }
+    }
+  }
+}
+
+.option__icon {
+  position: absolute;
+  right: 14px;
+
+  .option--contacts .option__input:hover + &,
+  .option--contacts .option__input:focus + & {
+    fill: $main-green-color;
+  }
+
+  .option--contacts .option__input:invalid:not(:placeholder-shown) + & {
+    fill: #ff8282;
+  }
+
+  @include tablet {
+    right: 17px;
+  }
+}

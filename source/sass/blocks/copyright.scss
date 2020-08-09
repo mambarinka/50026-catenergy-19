@@ -18,6 +18,15 @@
   justify-content: flex-end;
   align-items: center;
 
+  &:hover .copyright__icon,
+  &:focus .copyright__icon {
+    fill: $main-green-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @include tablet {
     justify-content: space-between;
   }

@@ -27,6 +27,16 @@
   padding-bottom: 27px;
 
   border-bottom: 1px solid #d9d9d9;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @include tablet {
     margin-right: 4%;
@@ -47,31 +57,3 @@
 .page-footer__social {
   @include list-reset;
 }
-
-/* .page-footer__logo {
-  display: none;
-
-  @include tablet {
-    display: block;
-    width: 102px;
-    margin-right: 78px;
-
-    &:hover .page-footer__icon,
-    &:focus .page-footer__icon {
-      fill: @design-color;
-    }
-
-    &:active .page-footer__icon {
-      opacity: 0.3;
-    }
-  }
-
-  @include desktop {
-    margin-right: 78px;
-  }
-}
-
-.page-footer__icon {
-  fill: @text-color-dark;
-}
- */

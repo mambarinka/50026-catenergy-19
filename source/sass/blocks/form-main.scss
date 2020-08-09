@@ -1,0 +1,47 @@
+.form-main {
+  padding-top: 15px;
+
+  @include tablet {
+    padding-top: 52px;
+  }
+
+  @include desktop {
+    padding-top: 71px;
+  }
+}
+
+.form-main__title {
+  @include h2-model;
+  @include wrapper;
+  margin-bottom: 25px;
+
+  @include tablet {
+    margin-bottom: 56px;
+  }
+}
+
+.form-main__text {
+  @include wrapper;
+  @include p-model;
+  width: 90%;
+  margin-bottom: 38px;
+
+  text-transform: uppercase;
+  font-family: $font-title;
+
+  @include tablet {
+    @include wrapper-form;
+    width: 68%;
+    margin-bottom: 65px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @include desktop {
+    width: 35%;
+    margin: 0;
+    margin-bottom: 64px;
+    padding-left: 7.85%;
+  }
+}
