@@ -29,6 +29,10 @@ if (buttonBefore) {
     slider.classList.add("example__bar-toggle--before");
     imageAfter.classList.add("example__hidden");
     imageBefore.classList.remove("example__hidden");
+    imageBefore.classList.add("example__no-clip-before");
+    imageAfter.classList.remove("example__no-clip-after");
+    imageBefore.classList.remove("example__hidden-tablet");
+    imageAfter.classList.add("example__hidden-tablet");
   });
 }
 
@@ -39,6 +43,10 @@ if (buttonAfter) {
     slider.classList.remove("example__bar-toggle--before");
     imageBefore.classList.add("example__hidden");
     imageAfter.classList.remove("example__hidden");
+    imageAfter.classList.add("example__no-clip-after");
+    imageBefore.classList.add("example__no-clip-before");
+    imageAfter.classList.remove("example__hidden-tablet");
+    imageBefore.classList.add("example__hidden-tablet");
   });
 }
 
