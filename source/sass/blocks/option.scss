@@ -167,15 +167,19 @@
     cursor: pointer;
   }
 
-  .option--radio .option__input + &:hover::before,
-  .option--radio .option__input + &:focus::before,
-  .option--add .option__input + &:hover::before,
-  .option--add .option__input + &:focus::before {
+  .option--radio .option__input:hover + &::before,
+  .option--add .option__input:hover + &::before {
     border: 1px solid #bababa;
   }
 
-  .option--radio .option__input + &:active::before,
-  .option--add .option__input + &:active::before {
+  .option--radio .option__input:focus + &::before,
+  .option--add .option__input:focus + &::before {
+    border: 1px solid #bababa;
+    outline: 2px solid $title-color;
+  }
+
+  .option--radio .option__input:active + &::before,
+  .option--add .option__input:active + &::before {
     opacity: 0.3;
   }
 
@@ -253,9 +257,13 @@
     min-height: 152px;
   }
 
-  &:hover,
+  &:hover {
+    border: 1px solid $border-table-color;
+  }
+
   &:focus {
     border: 1px solid $border-table-color;
+    outline: 2px solid $title-color;
   }
 
   &:active {

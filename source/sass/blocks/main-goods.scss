@@ -94,9 +94,14 @@
   align-items: center;
 
   @include tablet {
+    align-items: center;
     padding: 0;
 
     background-color: $bg-grey-color;
+  }
+
+  @include desktop {
+    align-items: center;
   }
 }
 

@@ -18,9 +18,13 @@
     background-color: $bg-grey-color;
   }
 
-  &:hover,
+  &:hover {
+    background-color: $minor-green-color;
+  }
+
   &:focus {
     background-color: $minor-green-color;
+    outline: 2px solid $title-color;
   }
 
   &:active {

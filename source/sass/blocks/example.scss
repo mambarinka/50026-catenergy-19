@@ -144,6 +144,7 @@
   @include text-options(12px, 12px, $text-color, 400, $font-main);
   position: absolute;
   top: 46px;
+  left: calc(50% - 67% / 2);
   width: 67%;
   margin: 0;
 
@@ -152,10 +153,11 @@
   background-color: $bg-grey-color;
 
   @include tablet {
-    width: auto;
+    width: 88%;
     padding-left: 4.65%;
     padding-right: 4.65%;
     top: 62px;
+    left: calc(50% - 88% / 2);
 
     font-size: 14px;
     line-height: 14px;
@@ -263,7 +265,7 @@
     position: absolute;
     width: auto;
     top: -169px;
-    left: calc(50% - 690px / 2);
+    left: calc(50% - 677px / 2);
 
     &--before {
       clip-path: polygon(0 0, 49% 0, 49% 100%, 0 100%);

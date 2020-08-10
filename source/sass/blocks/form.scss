@@ -242,10 +242,12 @@
     @include wrapper-form;
     display: flex;
     align-items: center;
+    width: 100%;
     margin-bottom: 73px;
   }
 
   @include desktop {
+    width: auto;
     margin-bottom: 83px;
   }
 }
@@ -266,6 +268,7 @@
 
     font-size: 20px;
     line-height: 20px;
+    white-space: nowrap;
   }
 
   @include desktop {
