@@ -1,15 +1,5 @@
 .programs {
   @include wrapper;
-
-  margin-bottom: 19px;
-
-  @include tablet {
-    margin-bottom: 44px;
-  }
-
-  @include desktop {
-    margin-bottom: 74px;
-  }
 }
 
 .programs__list {
@@ -19,19 +9,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
   }
 }
 
 .programs__item {
+  margin-bottom: 19px;
   padding-top: 30px;
   padding-bottom: 18px;
   padding-left: 7.1%;
   padding-right: 7.1%;
   background-color: $bg-grey-color;
-
-  &:not(:last-child) {
-    margin-bottom: 19px;
-  }
 
   &--slim .programs__item-title {
     &::after {
@@ -47,13 +35,14 @@
   }
 
   @include tablet {
+    margin-bottom: 30px;
     padding-top: 77px;
     padding-bottom: 59px;
     padding-left: 7.4%;
     padding-right: 7.4%;
 
-    &:not(:last-child) {
-      margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 44px;
     }
 
     &--slim .programs__description {
@@ -76,13 +65,9 @@
 
   @include desktop {
     width: 46.7%;
+    margin-bottom: 73px;
     padding-left: 4.2%;
     padding-right: 4.2%;
-    margin-bottom: 0;
-
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
 
     &--pro .programs__item-title {
       &::after {

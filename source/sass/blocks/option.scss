@@ -58,6 +58,10 @@
       }
     }
 
+    .option--contacts &:last-child {
+      margin-bottom: 0;
+    }
+
     .option--add & {
       width: 42%;
       margin-bottom: 54px;
@@ -181,6 +185,13 @@
   .option--radio .option__input:active + &::before,
   .option--add .option__input:active + &::before {
     opacity: 0.3;
+  }
+
+  .option--radio .option__input:disabled + &::before,
+  .option--add .option__input:disabled + &::before {
+    cursor: default;
+    opacity: 0.4;
+    outline: none;
   }
 
   .option--contacts & {
