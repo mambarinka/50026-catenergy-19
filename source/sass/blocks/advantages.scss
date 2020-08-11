@@ -1,16 +1,13 @@
 .advantages {
   @include wrapper;
-  margin-bottom: 45px;
 
   @include tablet {
     padding-bottom: 76px;
-    margin-bottom: 25px;
 
     border-bottom: 1px solid #e6e6e6;
   }
 
   @include desktop {
-    margin-bottom: 108px;
     padding-bottom: 0;
 
     border: none;
@@ -33,13 +30,14 @@
   @include tablet {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 }
 
 .advantages__item {
-  &:not(:last-child) {
-    margin-bottom: 26px;
+  margin-bottom: 26px;
+
+  &:last-child {
+    margin-bottom: 45px;
   }
 
   &--leaf .advantages__description {
@@ -109,10 +107,15 @@
   @include tablet {
     position: relative;
     width: 40.7%;
-    margin-right: 5%;
+    margin-right: 13.5%;
+    margin-bottom: 135px;
 
     &:nth-child(2n) {
-      margin-bottom: 135px;
+      margin-right: 0;
+    }
+
+    &:nth-last-child(2) {
+      margin-bottom: 25px;
     }
 
     &:last-child {
@@ -146,11 +149,11 @@
 
   @include desktop {
     width: 20.08%;
-    margin-right: auto;
-    margin-bottom: 0;
+    margin-right: 6.5%;
+    margin-bottom: 108px;
 
-    &:not(:last-child) {
-      margin-bottom: 0;
+    &:nth-child(2n) {
+      margin-right: 6.5%;
     }
 
     &:nth-child(4n) {

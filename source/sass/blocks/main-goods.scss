@@ -91,11 +91,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 
   @include tablet {
+    align-items: center;
     padding: 0;
 
     background-color: $bg-grey-color;
+  }
+
+  @include desktop {
+    align-items: center;
   }
 }
 
@@ -130,7 +136,6 @@
 
 .main-goods__description {
   width: 50%;
-  padding-top: 21px;
 
   @include tablet {
     width: 100%;
@@ -143,7 +148,7 @@
   margin-bottom: 13px;
 
   @include tablet {
-    width: 50%;
+    width: 46%;
     margin: 0 auto;
     margin-bottom: 19px;
 

@@ -49,6 +49,10 @@
   &[href]:active {
     opacity: 0.6;
   }
+
+  @include tablet {
+    width: 2100%;
+  }
 }
 
 .main-nav__logo-image {
