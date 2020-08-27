@@ -8,20 +8,20 @@
     top: 14px;
     width: 100%;
     height: 3px;
-    background-image: linear-gradient(to right, $bg-white-color 83.5%, $main-green-color 83.5%);
+    background-image: linear-gradient(to right, $bg-white-color 267px, $main-green-color 267px);
     z-index: -1;
   }
 
   @include tablet {
     &::before {
       top: 22px;
-      background-image: linear-gradient(to right, $main-green-color 3.5%, $bg-white-color 3.95%, $bg-white-color 57.5%, $main-green-color 57.5%);
+      background-image: linear-gradient(to right, $main-green-color 3.5%, $bg-white-color 3.95%, $bg-white-color 441px, $main-green-color 441px);
     }
   }
 
   @include desktop {
     &::before {
-      background-image: linear-gradient(to right, $main-green-color 4.9%, $bg-white-color 4.9%, $bg-white-color 33.5%, $main-green-color 33.5%);
+      background-image: linear-gradient(to right, $main-green-color 4.9%, $bg-white-color 4.9%, $bg-white-color 482px, $main-green-color 482px);
     }
   }
 }

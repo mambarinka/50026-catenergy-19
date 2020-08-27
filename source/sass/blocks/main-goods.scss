@@ -225,7 +225,7 @@
   line-height: 20px;
 
   @include tablet {
-    width: auto;
+    width: 77%;
     margin: 0 auto;
     margin-top: 0;
     margin-bottom: 40px;
@@ -233,7 +233,7 @@
   }
 
   @include desktop {
-    width: auto;
+    width: 70%;
     padding-left: 22%;
     padding-right: 22%;
   }

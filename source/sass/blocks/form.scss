@@ -36,7 +36,7 @@
 
   &--contacts {
     &::before {
-      background-image: linear-gradient(to right, $bg-white-color 68.9%, $main-green-color 68.9%);
+      background-image: linear-gradient(to right, $bg-white-color 220px, $main-green-color 220px);
     }
   }
 
@@ -44,7 +44,7 @@
     @include wrapper;
 
     &::before {
-      background-image: linear-gradient(to right, $bg-white-color 44.75%, $main-green-color 44.75%);
+      background-image: linear-gradient(to right, $bg-white-color 143px, $main-green-color 143px);
     }
   }
 
@@ -53,7 +53,7 @@
 
     &::before {
       top: 37px;
-      background-image: linear-gradient(to right, $bg-white-color 57.5%, $main-green-color 57.5%);
+      background-image: linear-gradient(to right, $bg-white-color 184px, $main-green-color 184px);
     }
   }
 
@@ -68,7 +68,7 @@
       &::before {
         top: 97px;
 
-        background-image: linear-gradient(to right, $main-green-color 3.9%, $bg-white-color 3.9%, $bg-white-color 81.1%, $main-green-color 81.1%);
+        background-image: linear-gradient(to right, $main-green-color 3.9%, $bg-white-color 3.9%, $bg-white-color 623px, $main-green-color 623px);
       }
     }
 
@@ -79,7 +79,7 @@
       &::before {
         top: 87px;
 
-        background-image: linear-gradient(to right, $main-green-color 3.9%, $bg-white-color 3.9%, $bg-white-color 37.6%, $main-green-color 37.6%);
+        background-image: linear-gradient(to right, $main-green-color 3.9%, $bg-white-color 3.9%, $bg-white-color 289px, $main-green-color 289px);
       }
     }
 
@@ -88,7 +88,7 @@
 
       &::before {
         top: 84px;
-        background-image: linear-gradient(to right, $main-green-color 3.9%, $bg-white-color 3.9%, $bg-white-color 41.9%, $main-green-color 41.9%);
+        background-image: linear-gradient(to right, $main-green-color 3.9%, $bg-white-color 3.9%, $bg-white-color 322px, $main-green-color 322px);
       }
     }
   }
@@ -117,7 +117,7 @@
       &::before {
         top: 45px;
 
-        background-image: linear-gradient(to right, $main-green-color 4.9%, $bg-white-color 4.9%, $bg-white-color 46%, $main-green-color 46%);
+        background-image: linear-gradient(to right, $main-green-color 4.9%, $bg-white-color 4.9%, $bg-white-color 663px, $main-green-color 663px);
       }
     }
 
@@ -129,7 +129,7 @@
       &::before {
         top: 13px;
 
-        background-image: linear-gradient(to right, $main-green-color 4.9%, $bg-white-color 4.9%, $bg-white-color 23%, $main-green-color 23%);
+        background-image: linear-gradient(to right, $main-green-color 4.9%, $bg-white-color 4.9%, $bg-white-color 331px, $main-green-color 331px);
       }
     }
 
@@ -137,7 +137,7 @@
       &::before {
         top: 85px;
 
-        background-image: linear-gradient(to right, $main-green-color 4.9%, $bg-white-color 4.9%, $bg-white-color 25.2%, $main-green-color 25.2%);
+        background-image: linear-gradient(to right, $main-green-color 4.9%, $bg-white-color 4.9%, $bg-white-color 363px, $main-green-color 363px);
       }
     }
   }
@@ -163,6 +163,10 @@
 
   line-height: 24px;
 
+  .form__item--contacts & {
+    width: 226px;
+  }
+
   .form__item--comments & {
     margin-bottom: 34px;
     padding: 0;
@@ -176,6 +180,7 @@
     @include wrapper-form;
 
     .form__item--contacts & {
+      width: auto;
       margin-bottom: 82px;
     }
 
@@ -261,7 +266,7 @@
   border: none;
 
   @include tablet {
-    width: auto;
+    width: 45%;
     margin-bottom: 0;
     margin-right: 9.6%;
     padding: 16px 10.3%;
@@ -272,6 +277,7 @@
   }
 
   @include desktop {
+    width: 46.6%;
     margin-right: 6.8%;
     padding: 16px 17%;
 
