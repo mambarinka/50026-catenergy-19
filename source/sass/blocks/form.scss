@@ -41,10 +41,8 @@
   }
 
   &--comments {
-    @include wrapper;
-
     &::before {
-      background-image: linear-gradient(to right, $bg-white-color 143px, $main-green-color 143px);
+      background-image: linear-gradient(to right, $bg-white-color 162px, $main-green-color 162px);
     }
   }
 
@@ -146,6 +144,16 @@
 .form__item-wrapper {
   @include wrapper-form;
 
+  .form__item--comments & {
+    @include wrapper;
+  }
+
+  @include tablet {
+    .form__item--comments & {
+      @include wrapper-form;
+    }
+  }
+
   @include desktop {
     padding: 0;
 
@@ -168,8 +176,9 @@
   }
 
   .form__item--comments & {
+    @include wrapper;
+
     margin-bottom: 34px;
-    padding: 0;
   }
 
   .form__item--add & {
@@ -201,8 +210,6 @@
 
     .form__item--comments & {
       margin-bottom: 79px;
-      padding-left: 7.5%;
-      padding-right: 7.5%;
     }
   }
 }
