@@ -2024,7 +2024,10 @@ input[type="radio"].visually-hidden {
           flex-wrap: wrap;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
-              justify-content: space-between; } }
+              justify-content: space-between;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch; } }
   @media (min-width: 1300px) {
     .main-goods__list {
       width: auto;
@@ -2065,11 +2068,9 @@ input[type="radio"].visually-hidden {
       padding-left: 2.85%;
       padding-right: 2.85%; } }
   @media (min-width: 768px) {
-      .main-goods__item:last-child {
-        margin: 0;
-        border: none; }
-      .main-goods__item:nth-last-child(2) {
-        margin-bottom: 67px; } }
+      .main-goods__item:nth-last-child(-n+2) {
+        margin-bottom: 67px;
+        border: none; } }
   @media (min-width: 1300px) {
     .main-goods__item {
       width: 20%;
@@ -2081,10 +2082,8 @@ input[type="radio"].visually-hidden {
         margin-right: 0; }
       .main-goods__item:nth-child(5n-1) {
         margin-bottom: 144px; }
-      .main-goods__item:nth-last-child(2) {
-        margin-bottom: 0; }
-      .main-goods__item:last-child {
-        margin-bottom: 72px; } }
+      .main-goods__item:nth-last-child(-n+4) {
+        margin-bottom: 75px; } }
 
 .main-goods__wrapper {
   width: auto;
@@ -2234,7 +2233,8 @@ input[type="radio"].visually-hidden {
   padding-top: 80px; }
   @media (min-width: 768px) {
     .show-all {
-      padding-top: 0; } }
+      padding-top: 0;
+      border: none; } }
 
 .show-all__wrapper {
   width: auto;
@@ -2262,6 +2262,7 @@ input[type="radio"].visually-hidden {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
+      min-height: 100%;
       padding: 0;
       padding-top: 163px;
       background-color: transparent;
@@ -2290,7 +2291,7 @@ input[type="radio"].visually-hidden {
     opacity: 0.2; }
   @media (min-width: 768px) {
     .show-all__title {
-      width: 52%;
+      width: 135px;
       margin: 0 auto;
       margin-bottom: 27px;
       font-size: 20px; }
@@ -2318,7 +2319,7 @@ input[type="radio"].visually-hidden {
     .show-all__text {
       width: 52%;
       margin: 0 auto;
-      margin-bottom: 85px;
+      margin-bottom: auto;
       font-size: 16px;
       line-height: 18px; } }
   @media (min-width: 1300px) {
