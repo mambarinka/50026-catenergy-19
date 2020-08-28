@@ -26,18 +26,22 @@
 
 .advantages__list {
   @include list-reset;
+  padding-bottom: 45px;
 
   @include tablet {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 26px;
+  }
+
+  @include desktop {
+    margin-bottom: 82px;
   }
 }
 
 .advantages__item {
-  margin-bottom: 26px;
-
-  &:last-child {
-    margin-bottom: 45px;
+  &:last-child .advantages__description {
+    margin-bottom: 0;
   }
 
   &--leaf .advantages__description {
@@ -108,17 +112,12 @@
     position: relative;
     width: 40.7%;
     margin-right: 13.5%;
-    margin-bottom: 135px;
 
     &:nth-child(2n) {
       margin-right: 0;
     }
 
-    &:nth-last-child(2) {
-      margin-bottom: 25px;
-    }
-
-    &:last-child {
+    &:nth-last-child(-n+2) .advantages__description {
       margin-bottom: 0;
     }
 
@@ -150,7 +149,6 @@
   @include desktop {
     width: 20.08%;
     margin-right: 6.5%;
-    margin-bottom: 108px;
 
     &:nth-child(2n) {
       margin-right: 6.5%;
@@ -165,6 +163,7 @@
 .advantages__description {
   @include p-model;
   position: relative;
+  margin-bottom: 26px;
   padding-left: 80px;
 
   &::before {
@@ -187,9 +186,10 @@
   }
 
   @include tablet {
+    width: 87.6%;
+    margin-bottom: 135px;
     padding-left: 0;
     padding-top: 110px;
-    width: 87.6%;
 
     &::before {
       width: 80px;
@@ -205,5 +205,6 @@
 
   @include desktop {
     width: 100%;
+    margin-bottom: 0;
   }
 }

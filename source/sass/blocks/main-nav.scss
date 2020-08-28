@@ -16,7 +16,7 @@
 
 .main-nav__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding-left: 6.25%;
   padding-right: 6.25%;
@@ -25,6 +25,7 @@
   border-bottom: 1px solid #e6e6e6;
 
   @include tablet {
+    justify-content: space-between;
     padding: 0;
     width: 24.4%;
 
@@ -37,6 +38,12 @@
 }
 
 .main-nav__logo {
+  display: flex;
+  justify-content: center;
+  width: 68%;
+  margin-right: 63px;
+  margin-left: auto;
+
   &[href] {
     cursor: pointer;
   }
@@ -51,7 +58,8 @@
   }
 
   @include tablet {
-    width: 2100%;
+    width: 100%;
+    margin: 0;
   }
 }
 
