@@ -27,6 +27,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: stretch;
   }
 
   @include desktop {
@@ -50,14 +51,10 @@
 
     border: none;
 
-    &:last-child {
-      margin: 0;
+    &:nth-last-child(-n+2) {
+      margin-bottom: 67px;
 
       border: none;
-    }
-
-    &:nth-last-child(2) {
-      margin-bottom: 67px;
     }
   }
 
@@ -76,12 +73,8 @@
       margin-bottom: 144px;
     }
 
-    &:nth-last-child(2) {
-      margin-bottom: 0;
-    }
-
-    &:last-child {
-      margin-bottom: 72px;
+    &:nth-last-child(-n+4) {
+      margin-bottom: 75px;
     }
   }
 }
