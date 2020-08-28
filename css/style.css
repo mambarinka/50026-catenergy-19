@@ -2729,22 +2729,8 @@ input[type="radio"].visually-hidden {
 .form__item--contacts::before {
   background-image: linear-gradient(to right, #ffffff 220px, #68b738 220px); }
 
-.form__item--comments {
-  width: auto;
-  padding-left: 6.25%;
-  padding-right: 6.25%; }
-  @media (min-width: 768px) {
-    .form__item--comments {
-      padding-left: 3.9%;
-      padding-right: 3.9%; } }
-  @media (min-width: 1300px) {
-    .form__item--comments {
-      max-width: 1300px;
-      margin: 0 auto;
-      padding-left: 2.85%;
-      padding-right: 2.85%; } }
-  .form__item--comments::before {
-    background-image: linear-gradient(to right, #ffffff 143px, #68b738 143px); }
+.form__item--comments::before {
+  background-image: linear-gradient(to right, #ffffff 162px, #68b738 162px); }
 
 .form__item--add {
   padding-top: 24px; }
@@ -2809,6 +2795,31 @@ input[type="radio"].visually-hidden {
     padding-left: 2.85%;
     padding-right: 2.85%; } }
 
+.form__item--comments .form__item-wrapper {
+  width: auto;
+  padding-left: 6.25%;
+  padding-right: 6.25%; }
+  @media (min-width: 768px) {
+    .form__item--comments .form__item-wrapper {
+      padding-left: 3.9%;
+      padding-right: 3.9%; } }
+  @media (min-width: 1300px) {
+    .form__item--comments .form__item-wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding-left: 2.85%;
+      padding-right: 2.85%; } }
+
+@media (min-width: 768px) and (min-width: 768px) {
+  .form__item--comments .form__item-wrapper {
+    padding-left: 9.2%;
+    padding-right: 8.7%; } }
+
+@media (min-width: 768px) and (min-width: 1300px) {
+  .form__item--comments .form__item-wrapper {
+    padding-left: 2.85%;
+    padding-right: 2.85%; } }
+
 @media (min-width: 1300px) {
   .form__item-wrapper {
     padding: 0; }
@@ -2856,8 +2867,20 @@ input[type="radio"].visually-hidden {
   .form__item--contacts .form__item-title {
     width: 226px; }
   .form__item--comments .form__item-title {
-    margin-bottom: 34px;
-    padding: 0; }
+    width: auto;
+    padding-left: 6.25%;
+    padding-right: 6.25%;
+    margin-bottom: 34px; }
+    @media (min-width: 768px) {
+      .form__item--comments .form__item-title {
+        padding-left: 3.9%;
+        padding-right: 3.9%; } }
+    @media (min-width: 1300px) {
+      .form__item--comments .form__item-title {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding-left: 2.85%;
+        padding-right: 2.85%; } }
   .form__item--add .form__item-title {
     margin-bottom: 40px; }
 
@@ -2893,9 +2916,7 @@ input[type="radio"].visually-hidden {
       padding-left: 7.5%;
       padding-right: 7.5%; }
       .form__item--comments .form__item-title {
-        margin-bottom: 79px;
-        padding-left: 7.5%;
-        padding-right: 7.5%; } }
+        margin-bottom: 79px; } }
 
 .form__option {
   list-style: none;
