@@ -23,6 +23,7 @@
 
     background-color: $bg-grey-color;
     background-image: linear-gradient(to right, $bg-grey-color 50%, #eaeaea 0%);
+    border-top: 2px solid $bg-white-color;
   }
 }
 
@@ -235,7 +236,7 @@
     align-items: flex-end;
     width: 57%;
     padding-top: 70px;
-    padding-bottom: 74px;
+    padding-bottom: 72px;
 
     background-image: linear-gradient(to right, $bg-grey-color 59.3%, #eaeaea 0%);
   }
