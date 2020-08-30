@@ -40,6 +40,7 @@
 }
 
 .advantages__item {
+  position: relative;
   display: flex;
   align-items: center;
   min-height: 54px;
@@ -169,7 +170,6 @@
 
 .advantages__description {
   @include p-model;
-  position: relative;
   padding-left: 80px;
 
   &::before {
