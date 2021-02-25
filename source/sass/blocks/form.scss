@@ -209,7 +209,11 @@
     padding-right: 7.5%;
 
     .form__item--comments & {
+      width: auto;
+      margin: 0;
       margin-bottom: 79px;
+      padding-left: 7.5%;
+      padding-right: 7.5%;
     }
   }
 }
